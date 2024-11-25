@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        textprimary: "var(--text-primary)",
+      },
+      fontFamily: {
+        notoSansJP: "Noto Sans JP",
       },
     },
   },

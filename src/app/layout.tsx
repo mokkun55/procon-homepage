@@ -18,7 +18,7 @@ export default function RootLayout() {
   return (
     <html lang="en">
       <body className={`${noto.className} antialiased`}>
-        <Main></Main>
+        <Main />
       </body>
     </html>
   );
