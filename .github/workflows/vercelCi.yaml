@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main # mainブランチにプッシュされたときにデプロイを実行
-  pull_request:
-    branches:
-      - main # mainブランチに対するプルリクエストでもデプロイを実行する
 
 jobs:
   deploy:
