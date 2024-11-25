@@ -1,12 +1,13 @@
 import Image from "next/image";
 import "./page.css";
+import Link from "next/link";
 
 const Home = () => {
   return (
     <div>
       <div id="top">
         <div id="top-container">
-          <a href="https://www.ktc.ac.jp/">
+          <Link href="https://www.ktc.ac.jp/">
             <Image
               src="/kindai-logo.png"
               width={30}
@@ -17,7 +18,7 @@ const Home = () => {
             <h1 className="inline-block align-middle">
               近畿大学工業高等専門学校
             </h1>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
