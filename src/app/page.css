@@ -1,0 +1,17 @@
+#top {
+	position: sticky;
+	width: 100%;
+}
+
+#top h1 {
+	font-size: 1.5rem;
+	font: "Noto Sans JP";
+	color: #202020;
+	margin: 0;
+	padding: 0;
+}
+
+#top-container {
+	display: flex;
+	padding: 1%;
+}
