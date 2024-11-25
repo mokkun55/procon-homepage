@@ -1,12 +1,12 @@
 import Image from "next/image";
-import "./page.css";
+import "./header.css";
 import Link from "next/link";
 
-const Home = () => {
+const Header = () => {
   return (
     <div>
-      <div id="top">
-        <div id="top-container">
+      <div className="sticky w-full top">
+        <div className="flex p-[1%]">
           <Link href="https://www.ktc.ac.jp/">
             <Image
               src="/kindai-logo.png"
@@ -25,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Header;
