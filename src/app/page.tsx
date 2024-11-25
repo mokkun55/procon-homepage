@@ -1,7 +1,6 @@
 const Home = () => {
   return (
     <div>
-      <h1>kugouituki</h1>
       <h1>もっくん</h1>
       <h2>プロコンホームページ</h2>
     </div>
