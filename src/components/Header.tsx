@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { textCss } from "../style/style";
+import Image from 'next/image'
+import Link from 'next/link'
+import { textCss } from '../app/style/style'
 
 export const Header = () => {
   return (
@@ -17,15 +17,14 @@ export const Header = () => {
             />
             <h1
               className={textCss({
-                size: "title",
-                class: "inline-block align-middle",
-              })}
-            >
+                size: 'title',
+                class: 'inline-block align-middle',
+              })}>
               近畿大学工業高等専門学校
             </h1>
           </Link>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
