@@ -8,7 +8,7 @@ export const Header = () => {
       <div className="flex p-2 justify-between">
         <Link href="https://www.ktc.ac.jp/">
           <Image
-            src="/kindai-logo.png"
+            src="/header/kindai-logo.png"
             width={30}
             height={30}
             alt="kutc-logo"
@@ -31,7 +31,7 @@ export const Header = () => {
             プログラミング技術部
           </h1>
           <Image
-            src="/node-logo.png"
+            src="/header/node-logo.png"
             width={30}
             height={30}
             alt="node-logo"
