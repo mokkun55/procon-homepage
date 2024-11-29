@@ -111,7 +111,7 @@ h4,
 h5 {
   font-size: 100%;
   font-weight: normal;
-  line-height: 1;
+  line-height: 1.5;
 }
 input,
 textarea,
@@ -146,8 +146,8 @@ img {
   vertical-align: text-bottom;
   vertical-align: -webkit-baseline-middle;
   max-width: 100%;
-  height: auto;
-  width: auto;
+  /* height: auto; */
+  /* width: auto; */
 }
 a {
   text-decoration: none;
@@ -172,4 +172,5 @@ a {
 body {
   color: var(--text-primary);
   background: var(--background);
+  font-family: var(--font-noto-sans-jp);
 }
