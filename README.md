@@ -10,3 +10,6 @@ https://github.com/mokkun55/procon-homepage/wiki
 | 本番環境 | (まだない)                         |
 | 検証環境 | https://procon-homepage.vercel.app |
 | ローカル | http://localhost:3000              |
+
+## カンバン
+https://github.com/users/mokkun55/projects/2
