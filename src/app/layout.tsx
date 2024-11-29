@@ -3,6 +3,7 @@ import './globals.css'
 import { Noto_Sans_JP } from 'next/font/google'
 import Home from './page'
 
+// フォント指定
 const noto = Noto_Sans_JP({
   weight: ['400', '700'],
   style: 'normal',
@@ -17,7 +18,11 @@ export const metadata: Metadata = {
 export default function RootLayout() {
   return (
     <html lang="en">
-      <body className={`${noto.className} antialiased`}>
+      <body
+        className={`${noto.className} antialiased`}
+        style={{
+          fontFamily: 'Noto_Sans_JP',
+        }}>
         <Home />
       </body>
     </html>

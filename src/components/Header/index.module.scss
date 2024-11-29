@@ -1,0 +1,35 @@
+.container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff99;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+
+  .headerLeft {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 0.5rem;
+    }
+
+    .title {
+      color: var(--text-primary);
+    }
+  }
+
+  .headerRight {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-left: 0.5rem;
+    }
+  }
+}
