@@ -1,4 +1,3 @@
-import { Fotter } from '@/components/Fotter'
 import { Header } from '@/components/Header'
 import { pageMetadata } from '@/components/metadate'
 
@@ -14,7 +13,6 @@ const Home = () => {
         </video>
         <div className="block h-[1000px]"></div>
       </div>
-      <Fotter />
     </div>
   )
 }
