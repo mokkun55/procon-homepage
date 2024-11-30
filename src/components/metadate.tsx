@@ -8,8 +8,10 @@ export const pageMetadata = {
     title: '近畿大学工業高等専門学校プログラミング技術部',
     description:
       '近大高専プログラミング技術部です！1年から5年のみんなで高専プロコンや名張祭に向けて日々活動しています！部員募集中です！プログラミング未経験も是非！！！！',
+    // TODO 本番環境用がないから出来てから書く予定
     //url: '',
     siteName: '近大高専プロコン部',
+    // TODO 画像がないので作ったら書き直す予定
     /*images: [
         {
           url: 'https://example.com/og-image.jpg',
