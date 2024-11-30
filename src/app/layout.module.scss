@@ -1,0 +1,15 @@
+.contents{
+    display: flex;
+
+    .sidebar {
+        width: 25%;
+        padding: 0 1rem;
+        color: var(--text-primary);
+        font-weight: 700;
+    }
+
+    .content{
+        width: 75%;
+        padding: 0 1rem;
+    }
+}

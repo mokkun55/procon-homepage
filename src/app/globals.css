@@ -158,7 +158,8 @@ a {
 :root {
   --background: #ffffff;
   --foreground: #ffffff;
-  --text-primary: #202020;
+  --text-header-primary: #202020;
+  --text-primary: #222222;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -168,7 +169,7 @@ a {
 }
 
 body {
-  color: var(--text-primary);
+  color: var(--text-header-primary);
   background: var(--background);
   font-family: var(--font-noto-sans-jp);
 }
