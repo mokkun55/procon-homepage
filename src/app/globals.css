@@ -122,12 +122,10 @@ select {
 input[type='button'],
 input[type='text'],
 input[type='submit'] {
-  -webkit-appearance: none;
   border-radius: 0;
 }
 textarea {
   resize: none;
-  -webkit-appearance: none;
   border-radius: 0;
 }
 th,

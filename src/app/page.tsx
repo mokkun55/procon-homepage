@@ -1,4 +1,7 @@
 import { Header } from '@/components/Header'
+import { pageMetadata } from '@/components/metadate'
+
+export const metadata = pageMetadata
 import styles from './index.module.scss'
 
 const Home = () => {
