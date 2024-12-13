@@ -15,11 +15,13 @@ const noto = Noto_Sans_JP({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${noto.variable} antialiased`} style={{ padding: '0 8px' }}>
-        <Header />
-        <div className={styles.contents}>
-          <SideBar className={styles.sidebar} />
-          <div className={styles.content}>{children}</div>
+      <body className={`${noto.variable} antialiased`}>
+        <div className={styles.root}>
+          <Header />
+          <div className={styles.contents}>
+            <SideBar className={styles.sidebar} />
+            <div className={styles.content}>{children}</div>
+          </div>
         </div>
       </body>
     </html>
