@@ -1,6 +1,11 @@
 import styles from './index.module.scss'
 
-export const Splitter = ({ text, children }: { text: string; children: React.ReactNode }) => {
+type Props = {
+  text: string
+  children: React.ReactNode
+}
+
+export const Splitter = ({ text, children }: Props) => {
   return (
     <div className={styles.splitter}>
       <div className={styles.index}>

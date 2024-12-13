@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${noto.variable} antialiased`}>
-        <div className={styles.root}>
+        <div className={styles.container}>
           <Header />
           <div className={styles.contents}>
             <SideBar className={styles.sidebar} />

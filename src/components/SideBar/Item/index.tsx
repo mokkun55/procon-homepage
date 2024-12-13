@@ -15,8 +15,8 @@ const sizeMapping = {
 
 export const Item = ({ url, text, size }: Props): React.ReactNode => {
   return (
-    <div>
-      <Link className={styles.link} href={url} style={{ fontSize: sizeMapping[size] }}>
+    <div className={styles.link}>
+      <Link href={url} style={{ fontSize: sizeMapping[size] }}>
         {text}
       </Link>
     </div>
