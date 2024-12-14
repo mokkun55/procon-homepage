@@ -1,4 +1,3 @@
-import { Header } from '@/components/Header'
 import { pageMetadata } from '@/components/metadate'
 
 export const metadata = pageMetadata
@@ -7,7 +6,6 @@ import styles from './index.module.scss'
 const Home = () => {
   return (
     <div className={styles.container}>
-      <Header />
       <div>
         <video autoPlay loop playsInline muted poster="/introduction/topmovie_720p.jpg" className={styles.video}>
           <source src="/introduction/topmovie_720p.mp4" type="video/mp4" />
