@@ -12,8 +12,10 @@ export const Header = () => {
         </Link>
       </div>
       <div className={styles.headerRight}>
-        <h1 className={styles.title}>プログラミング技術部</h1>
-        <Image src="/header/node-logo.png" width={30} height={30} alt="node-logo" className={styles.logo} />
+        <Link href="/" className={styles.headerLeft}>
+          <h1 className={styles.title}>プログラミング技術部</h1>
+          <Image src="/header/node-logo.png" width={30} height={30} alt="node-logo" className={styles.logo} />
+        </Link>
       </div>
     </div>
   )
