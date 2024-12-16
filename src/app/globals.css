@@ -174,3 +174,7 @@ body {
   background: var(--background);
   font-family: var(--font-noto-sans-jp);
 }
+
+html {
+  scrollbar-gutter: stable;
+}
