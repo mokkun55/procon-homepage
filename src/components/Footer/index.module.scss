@@ -1,0 +1,34 @@
+.container{
+    background-color: #f8f9fa;
+    padding: 30px 70px;
+    font-weight: 700;
+
+    .toptext{
+        padding:0 1rem;
+    }
+
+    .footerColumn{
+        display:flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-direction: column; // モバイル用に縦並びに変更
+            text-align: center;
+          }
+
+        .column{
+            flex: 1;
+            margin: 0 10px;
+        }
+    }
+
+    h1{
+        font-size:1.4rem;
+        color:#307690;
+        margin:0 0 2.0rem;
+    }
+
+    p{
+        font-weight: 100;
+    }
+}
