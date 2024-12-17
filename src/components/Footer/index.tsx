@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import { Item } from '@/components/features/Item'
 import { Splitter } from '@/components/features/Splitter'
 
+//TODOフッターリンク
 export const Footer = () => {
   return (
     <div className={styles.container}>
@@ -11,6 +12,7 @@ export const Footer = () => {
           <p className={styles.school}>近畿大学工業高等専門学校</p>
         </Link>
         <h1 className={styles.club}>プログラミング技術部</h1>
+
         <Item url="/" text="ホーム" size="big" />
       </div>
       <div className={styles.footerColumn}>
