@@ -8,9 +8,9 @@ export const Footer = () => {
     <div className={styles.container}>
       <div className={styles.toptext}>
         <Link href="https://www.ktc.ac.jp/">
-          <p>近畿大学工業高等専門学校</p>
+          <p className={styles.school}>近畿大学工業高等専門学校</p>
         </Link>
-        <h1>プログラミング技術部</h1>
+        <h1 className={styles.club}>プログラミング技術部</h1>
         <Item url="/" text="ホーム" size="big" />
       </div>
       <div className={styles.footerColumn}>

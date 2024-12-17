@@ -5,6 +5,16 @@
 
     .toptext{
         padding:0 1rem;
+        
+        .school{
+            font-weight: 100;
+        }
+        .club{
+            font-size:1.4rem;
+            color:#307690;
+            margin:0 0 2.0rem;
+        }
+    
     }
 
     .footerColumn{
@@ -22,13 +32,5 @@
         }
     }
 
-    h1{
-        font-size:1.4rem;
-        color:#307690;
-        margin:0 0 2.0rem;
-    }
-
-    p{
-        font-weight: 100;
-    }
+    
 }
