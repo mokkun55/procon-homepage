@@ -30,7 +30,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
           <Footer />
-        </div>
         </MantineProvider>
       </body>
     </html>
