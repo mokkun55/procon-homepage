@@ -28,8 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <SideBar className={styles.sidebar} />
               <div className={styles.content}>{children}</div>
             </div>
+            <Footer />
           </div>
-          <Footer />
         </MantineProvider>
       </body>
     </html>
