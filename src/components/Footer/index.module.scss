@@ -1,9 +1,12 @@
-.container{
-    max-width: 1400px;
-    margin: 0 auto;
+.footer{
     background-color: #f8f9fa;
     padding: 30px 70px;
     font-weight: 700;
+
+    .container{
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 
     .toptext{
         padding:0 1rem;
