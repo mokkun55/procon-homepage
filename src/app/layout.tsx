@@ -3,6 +3,7 @@ import styles from './layout.module.scss'
 import { Noto_Sans_JP } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { SideBar } from '@/components/SideBar'
+import { Footer } from '@/components/Footer'
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core'
 
 // フォント指定
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className={styles.content}>{children}</div>
             </div>
           </div>
+          <Footer />
         </MantineProvider>
       </body>
     </html>

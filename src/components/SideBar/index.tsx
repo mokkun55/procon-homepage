@@ -1,5 +1,5 @@
-import { Item } from './Item'
-import { Splitter } from './Splitter'
+import { Item } from '@/components/features/Item'
+import { Splitter } from '@/components/features/Splitter'
 import styles from './index.module.scss'
 
 export const SideBar = ({ className }: { className?: string }) => {

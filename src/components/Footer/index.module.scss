@@ -1,0 +1,41 @@
+.footer{
+    background-color: #f8f9fa;
+    padding: 30px 70px;
+    font-weight: 700;
+
+    .container{
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .toptext{
+        padding:0 1rem;
+        
+        .school{
+            font-weight: 100;
+        }
+        .club{
+            font-size:1.4rem;
+            color:#307690;
+            margin:0 0 2.0rem;
+        }
+    
+    }
+
+    .footerColumn{
+        display:flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-direction: column; // モバイル用に縦並びに変更
+            text-align: center;
+          }
+
+        .column{
+            flex: 1;
+            margin: 0 10px;
+        }
+    }
+
+    
+}
