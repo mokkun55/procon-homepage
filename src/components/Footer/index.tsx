@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.toptext}>
+        <div className={styles.topText}>
           <Link href="https://www.ktc.ac.jp/">
             <p className={styles.school}>近畿大学工業高等専門学校</p>
           </Link>
