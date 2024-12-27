@@ -1,5 +1,5 @@
 import styles from './page.module.scss'
 
 export default function Registration() {
-  return <div className={styles.container}></div>
+  return <div className={styles.container} />
 }
