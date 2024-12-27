@@ -6,11 +6,9 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
 		"biome:fix": "biome lint --write ./src",
 		"biome:unsafe": "biome lint --write --unsafe ./src",
-		"tsc": "tsc --noEmit",
-		"prepare": "husky"
+		"tsc": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@mantine/core": "^7.15.2",
@@ -26,16 +24,8 @@
 		"@types/node": "^22.10.2",
 		"@types/react": "^19.0.2",
 		"@types/react-dom": "^19.0.2",
-		"eslint": "^9.17.0",
-		"eslint-config-next": "15.1.3",
-		"husky": "^9.1.7",
 		"lefthook": "^1.10.1",
-		"lint-staged": "^15.2.11",
-		"prettier": "^3.4.2",
 		"typescript": "^5.7.2"
-	},
-	"lint-staged": {
-		"*.{ts,tsx}": ["prettier --write", "eslint --fix"]
 	},
 	"volta": {
 		"node": "20.17.0"
