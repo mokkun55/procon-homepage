@@ -1,0 +1,10 @@
+name: testCi
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: install dependencies
+        run: pnpm install
