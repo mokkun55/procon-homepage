@@ -24,5 +24,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run tests
+      - name: Run biome
+        run: pnpm run biome:fix
+
+      - name: Run tsc
         run: pnpm run tsc
