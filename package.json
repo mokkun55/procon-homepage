@@ -11,7 +11,7 @@
     "biome:unsafe": "biome lint --write --unsafe ./src",
     "tsc": "tsc --noEmit",
     "prepare": "husky",
-    "check-spell": "cspell 'src/**/*.ts' 'src/**/*.tsx' 'src/**/*.js'"
+    "check-spell": "cspell \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.js\""
   },
   "dependencies": {
     "@mantine/core": "^7.15.2",
