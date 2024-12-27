@@ -1,10 +1,10 @@
 import './globals.css'
-import styles from './layout.module.scss'
-import { Noto_Sans_JP } from 'next/font/google'
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { SideBar } from '@/components/SideBar'
-import { Footer } from '@/components/Footer'
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core'
+import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core'
+import { Noto_Sans_JP } from 'next/font/google'
+import styles from './layout.module.scss'
 
 // フォント指定
 const noto = Noto_Sans_JP({
