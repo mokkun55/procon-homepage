@@ -1,5 +1,4 @@
 import './globals.css'
-import './variables.css'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { SideBar } from '@/components/SideBar'
