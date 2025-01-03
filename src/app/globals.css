@@ -119,9 +119,9 @@ select {
   font-family: inherit;
   font-size: 16px;
 }
-input[type='button'],
-input[type='text'],
-input[type='submit'] {
+input[type="button"],
+input[type="text"],
+input[type="submit"] {
   border-radius: 0;
 }
 textarea {
@@ -153,14 +153,6 @@ a {
 }
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #ffffff;
-  --text-header-primary: #202020;
-  --text-primary: #222222;
-  --text-splitter-primary: #444;
 }
 
 @media (prefers-color-scheme: dark) {
