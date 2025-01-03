@@ -1,0 +1,13 @@
+/* css変数の定義ファイル */
+:root {
+  --primary-color: #005780;
+  --secondary-color: #eef2f5;
+
+  --header-footer-bg: #f8f9fa;
+  --body-bg: #ffffff;
+
+  /* テキスト */
+  --text-header-primary: #202020;
+  --text-primary: #222222;
+  --text-splitter-primary: #444;
+}
