@@ -1,7 +1,7 @@
 /* css変数の定義ファイル */
 :root {
-  --primary-color: #005780;
-  --secondary-color: #eef2f5;
+  --primary: #005780;
+  --secondary: #eef2f5;
 
   --header-footer-bg: #f8f9fa;
   --body-bg: #ffffff;
