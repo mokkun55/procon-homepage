@@ -4,7 +4,8 @@
   --secondary: #eef2f5;
 
   --header-footer-bg: #f8f9fa;
-  --body-bg: #ffffff;
+  --body-primary-bg: #ffffff;
+  --body-dark-bg: #ffffff;
 
   /* テキスト */
   --text-header-primary: #202020;
