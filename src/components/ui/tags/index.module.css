@@ -1,7 +1,12 @@
-.tags .text {
+.tags {
   flex: auto;
   margin: 0;
   padding: 0;
-  color: blue;
-  font-weight: 700;
+}
+.tags .text {
+  background-color: #EEF2F5;
+  padding: 5;
+  color: #005780;
+  font-weight: bold;
+  border: solid 3px #005780;
 }/*# sourceMappingURL=index.module.css.map */
