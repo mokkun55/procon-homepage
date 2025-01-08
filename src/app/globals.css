@@ -157,13 +157,13 @@ a {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
+    --background: var(--body-dark-bg);
   }
 }
 
 body {
   color: var(--text-header-primary);
-  background: var(--background);
+  background: var(--body-primary-bg);
   font-family: var(--font-noto-sans-jp);
 }
 
