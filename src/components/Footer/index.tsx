@@ -27,7 +27,7 @@ export const Footer = () => {
           <div className={styles.column}>
             <Splitter text="部員向け">
               <Item url="/schedule" text="予定" size="default" />
-              <Item url="/notice" text="お知らせ" size="default" />
+              <Item url="/posts" text="お知らせ" size="default" />
               <Item url="absence" text="欠席連絡フォーム" size="default" />
             </Splitter>
           </div>
