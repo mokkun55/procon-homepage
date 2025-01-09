@@ -1,18 +1,19 @@
 .tags {
+  width: fit-content;
   flex: auto;
   margin: 0;
-  // margin-top: 10;
   padding: 0;
-  // padding-top: 10;
+  // background-color: --secondary;
+  background-color: #eef2f5;
+
+  // border: solid 3px --primary;
+  border: solid 3px #005780;
 
   .text{
-    background-color: #EEF2F5;
-    padding: 5;
+    padding: 2 4;
+    // color: --primary;
     color: #005780;
     font-weight: bold;
-    border: solid 3px #005780;
-
   }
-
 }
 
