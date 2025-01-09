@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function Works() {
   return (
     <div className={styles.container}>
-     <Link href="/Works/hogehoge">ほげほげ</Link>
-     <Link href="/Works/hagehage">はげはげ</Link>
+     <Link href="/works/hogehoge">ほげほげ</Link>
+     <Link href="/works/hagehage">はげはげ</Link>
       
 
     </div>

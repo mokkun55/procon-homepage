@@ -19,21 +19,21 @@ export const Footer = () => {
         <div className={styles.footerColumn}>
           <div className={styles.column}>
             <Splitter text="入学生向け">
-              <Item url="/Registration" text="入部届け" size="default" />
-              <Item url="/Activity" text="活動日及び活動場所" size="default" />
-              <Item url="/Works" text="作品一覧" size="default" />
+              <Item url="/registration" text="入部届け" size="default" />
+              <Item url="/activity" text="活動日及び活動場所" size="default" />
+              <Item url="/works" text="作品一覧" size="default" />
             </Splitter>
           </div>
           <div className={styles.column}>
             <Splitter text="部員向け">
-              <Item url="/Schedule" text="予定" size="default" />
-              <Item url="/Notice" text="お知らせ" size="default" />
-              <Item url="Absence" text="欠席連絡フォーム" size="default" />
+              <Item url="/schedule" text="予定" size="default" />
+              <Item url="/notice" text="お知らせ" size="default" />
+              <Item url="absence" text="欠席連絡フォーム" size="default" />
             </Splitter>
           </div>
           <div className={styles.column}>
             <Splitter text="開発">
-              <Item url="/Development" text="開発の余談" size="default" />
+              <Item url="/development" text="開発の余談" size="default" />
               <Item url="https://github.com/mokkun55/procon-homepage" text="Github" size="default" />
             </Splitter>
           </div>
