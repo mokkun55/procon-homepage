@@ -1,6 +1,14 @@
-type Props = { params: { id: string } }
+import type { GetServerSideProps } from 'next'
 
-export default function Page({ params }: Props) {
-  const { id } = params
+type Props = { id: string }
+
+export default function Page({ id }: Props) {
   return <div>{id}</div>
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { id } = context.params
+  return {
+    props: { id },
+  }
 }
