@@ -1,6 +1,10 @@
-type Props = { params: { id: string } }
+type Props = {
+  params: {
+    id: string
+  }
+}
 
-export default function Page({ params }: Props) {
-  const { id } = params
+export default async function page({ params }: Props) {
+  const { id } = await params
   return <div>{id}</div>
 }
