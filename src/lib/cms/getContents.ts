@@ -13,11 +13,11 @@ const client = () => {
   })
 }
 
-export const getWorks = async () => {
+export const getContents = async (endpoint: string) => {
   const data: {
     contents: Array<{ id: string; title: string; date: Date; img: { url: string }; description: string }>
   } = await client().get({
-    endpoint: 'works',
+    endpoint: endpoint,
   })
 
   return data.contents
