@@ -1,5 +1,5 @@
-import styles from './page.module.scss'
 import Link from 'next/link'
+import styles from './page.module.scss'
 
 export default function Works() {
   return (
