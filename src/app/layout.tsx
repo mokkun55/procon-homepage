@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { SideBar } from '@/components/SideBar'
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core'
+import '@mantine/core/styles.css'
 import { Noto_Sans_JP } from 'next/font/google'
 import styles from './layout.module.scss'
 
