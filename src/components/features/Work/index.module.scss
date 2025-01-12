@@ -1,0 +1,24 @@
+.container {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: none;
+  }
+  // TODO 大きさは後で調整
+  .cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-weight: 700;
+    }
+    .date {
+      font-weight: 700;
+    }
+  }
+
+  .cardBottom {
+    margin-top: 4px;
+  }
+}
