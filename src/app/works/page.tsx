@@ -13,32 +13,50 @@ export default function Works() {
 
       <SimpleGrid cols={3} className={styles.works}>
         <Work
-          title={'テスト'}
+          title={'work1'}
           date={new Date()}
-          img={'/testImgs/chicken.jpg'}
-          description={'皆さん今日のお昼ごはんは、何を食べますか？？ 今日は、唐揚げを作りました！'}
+          img={'/testImgs/procon1.jpg'}
+          description={
+            'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'
+          }
           id="work1"
         />
         <Work
           title={'work2'}
           date={new Date()}
-          img={'/404/404not-found.png'}
-          description={'皆さん今日のお昼ごはんは、何を食べますか？？ 今日は、唐揚げを作りました！ほげほげほげほげほげ'}
+          img={'/testImgs/procon2.jpg'}
+          description={'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'}
           id="work2"
         />
         <Work
-          title={'3'}
+          title={'work3'}
           date={new Date()}
-          img={'/404/404not-found.png'}
-          description={'皆さん今日のお昼ごはんは、何を食べますか？？ 今日は、唐揚げを作りました！'}
+          img={'/testImgs/procon3.jpg'}
+          description={
+            'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'
+          }
           id="work3"
         />
         <Work
-          title={'4'}
+          title={'work4'}
           date={new Date()}
-          img={'/404/404not-found.png'}
-          description={'皆さん今日のお昼ごはんは、何を食べますか？？ 今日は、唐揚げを作りました！'}
+          img={'/testImgs/procon4.jpg'}
+          description={'この文章はダミーです。'}
           id="work4"
+        />
+        <Work
+          title={'work5'}
+          date={new Date()}
+          img={'/testImgs/procon5.jpg'}
+          description={'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'}
+          id="work5"
+        />
+        <Work
+          title={'からあげ'}
+          date={new Date()}
+          img={'/testImgs/chicken.jpg'}
+          description={'皆さん今日のお昼ごはんは、何を食べますか？？ 今日は、唐揚げを作りました！ほげほげほげほげほげ'}
+          id="chicken"
         />
       </SimpleGrid>
     </div>
