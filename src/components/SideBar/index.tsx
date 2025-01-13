@@ -8,7 +8,7 @@ export const SideBar = ({ className }: { className?: string }) => {
       <div className={styles.container}>
         <Item url="/" text="ホーム" size="big" />
         <Splitter text="入学生向け">
-          <Item url="/registration" text="入部届け" size="default" />
+          <Item url="/registration" text="入部届" size="default" />
           <Item url="/activity" text="活動日及び活動場所" size="default" />
           <Item url="/works" text="作品一覧" size="default" />
         </Splitter>

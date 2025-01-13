@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import styles from './index.module.scss'
 import { Item } from '@/components/features/Item'
 import { Splitter } from '@/components/features/Splitter'
+import Link from 'next/link'
+import styles from './index.module.scss'
 
 //TODOフッターリンク
 export const Footer = () => {
