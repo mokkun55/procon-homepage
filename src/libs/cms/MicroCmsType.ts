@@ -7,7 +7,7 @@ export type Works = {
 }
 
 export type Posts = {
-  //仮置き
+  // TODO 仮置き
   id: string
   title: string
   date: Date
