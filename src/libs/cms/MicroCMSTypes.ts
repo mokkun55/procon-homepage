@@ -1,7 +1,7 @@
-export type Works = {
+export type WorksType = {
   id: string
   title: string
   date: Date
-  img: { url: string }
+  image: { url: string }
   description: string
 }
