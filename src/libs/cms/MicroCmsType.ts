@@ -5,3 +5,7 @@ export type Works = {
   img: { url: string }
   description: string
 }
+
+export type Posts = {
+  
+}
