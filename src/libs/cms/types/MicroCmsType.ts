@@ -4,13 +4,10 @@ export type WorksType = {
   date: Date
   image: { url: string }
   description: string
+  tags: string[]
 }
 
 export type PostsType = {
   // TODO 仮置き
   id: string
-  title: string
-  date: Date
-  image: { url: string }
-  description: string
 }
