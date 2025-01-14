@@ -3,16 +3,12 @@
   flex: auto;
   margin: 0;
   padding: 0;
-  // background-color: --secondary;
-  background-color: #eef2f5;
-
-  // border: solid 3px --primary;
-  border: solid 3px #005780;
+  background-color: var(--secondary);
+  border: solid 3px var(--primary);
 
   .text{
-    padding: 2 4;
-    // color: --primary;
-    color: #005780;
+    padding: 2px 4px;
+    color: var(--primary);
     font-weight: bold;
   }
 }
