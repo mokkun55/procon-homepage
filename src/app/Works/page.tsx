@@ -1,8 +1,23 @@
 import { Work } from '@/components/features/Work'
+import { getContents } from '@/feature/cms/hooks/getContents'
+import type { WorksType } from '@/libs/cms/types/MicroCmsType'
 import { SimpleGrid } from '@mantine/core'
 import styles from './page.module.scss'
 
-export default function Works() {
+export default async function Works() {
+  const worksContents = await getContents('works')
+
+  const worksElement = worksContents.map((work: WorksType) => (
+    <Work
+      key={work.id}
+      title={work.title}
+      id={work.id}
+      date={work.date}
+      img={work.image.url}
+      description={work.description}
+    />
+  ))
+
   return (
     // TODO 後々スケルトンとか表示したいな
     <div className={styles.container}>
@@ -11,53 +26,9 @@ export default function Works() {
         <p className={styles.description}>画像クリックで詳細ページに移動できます</p>
       </div>
 
+      {/* TODO レスポンシブデザイン */}
       <SimpleGrid cols={3} className={styles.works}>
-        <Work
-          title={'work1'}
-          date={new Date()}
-          img={'/testImgs/procon1.jpg'}
-          description={
-            'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'
-          }
-          id="work1"
-        />
-        <Work
-          title={'work2'}
-          date={new Date()}
-          img={'/testImgs/procon2.jpg'}
-          description={'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'}
-          id="work2"
-        />
-        <Work
-          title={'work3'}
-          date={new Date()}
-          img={'/testImgs/procon3.jpg'}
-          description={
-            'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'
-          }
-          id="work3"
-        />
-        <Work
-          title={'work4'}
-          date={new Date()}
-          img={'/testImgs/procon4.jpg'}
-          description={'この文章はダミーです。'}
-          id="work4"
-        />
-        <Work
-          title={'work5'}
-          date={new Date()}
-          img={'/testImgs/procon5.jpg'}
-          description={'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'}
-          id="work5"
-        />
-        <Work
-          title={'からあげ'}
-          date={new Date()}
-          img={'/testImgs/chicken.jpg'}
-          description={'皆さん今日のお昼ごはんは、何を食べますか？？ 今日は、唐揚げを作りました！ほげほげほげほげほげ'}
-          id="chicken"
-        />
+        {worksElement}
       </SimpleGrid>
     </div>
   )
