@@ -1,8 +1,7 @@
-import Posts from "@/app/posts/page"
-import { getClient } from "@/libs/cms/microCmsClient"
-import { Works } from "@/libs/cms/MicroCmsType"
+import { getClient } from '@/libs/cms/microCmsClient'
+import type { PostsType, WorksType } from '@/libs/cms/types/MicroCmsType'
 
-export const getContents = async (endpoint: 'works'|'posts') => {
+export const getContents = async (endpoint: 'works' | 'posts'): Promise<WorksType[] | PostsType[]> => {
   const data = await getClient().get({
     endpoint: endpoint,
   })

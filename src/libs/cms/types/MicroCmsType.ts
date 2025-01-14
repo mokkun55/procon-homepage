@@ -1,16 +1,16 @@
-export type Works = {
+export type WorksType = {
   id: string
   title: string
   date: Date
-  img: { url: string }
+  image: { url: string }
   description: string
 }
 
-export type Posts = {
+export type PostsType = {
   // TODO 仮置き
   id: string
   title: string
   date: Date
-  img: { url: string }
+  image: { url: string }
   description: string
 }
