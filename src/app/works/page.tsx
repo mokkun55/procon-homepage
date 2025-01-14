@@ -1,15 +1,22 @@
 import { Work } from '@/components/features/Work'
+import { getContents } from '@/feature/cms/hooks/getContents'
+import type { WorksType } from '@/libs/cms/types/MicroCmsType'
 import { SimpleGrid } from '@mantine/core'
 import styles from './page.module.scss'
-import { getContents } from '@/feature/cms/hooks/getContents'
-import type { WorksType } from '@/libs/cms/MicroCmsType'
 
 export default async function Works() {
   const worksContents = await getContents('works')
 
-  const worksElement = worksContents.map((work:WorksType) => 
-    <Work key={work.id} title={work.title} id={work.id} date={work.date} img={work.image.url} description={work.description}/>
-  )
+  const worksElement = worksContents.map((work: WorksType) => (
+    <Work
+      key={work.id}
+      title={work.title}
+      id={work.id}
+      date={work.date}
+      img={work.image.url}
+      description={work.description}
+    />
+  ))
 
   return (
     // TODO 後々スケルトンとか表示したいな
@@ -18,7 +25,8 @@ export default async function Works() {
         <h1 className={styles.title}>作品紹介</h1>
         <p className={styles.description}>画像クリックで詳細ページに移動できます</p>
       </div>
-      
+
+      {/* TODO レスポンシブデザイン */}
       <SimpleGrid cols={3} className={styles.works}>
         {worksElement}
       </SimpleGrid>
