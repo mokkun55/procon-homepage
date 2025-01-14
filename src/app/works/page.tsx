@@ -16,6 +16,7 @@ export default async function Works() {
       image={work.image}
       description={work.description}
       tags={work.tags}
+      links={work.links}
     />
   ))
 
