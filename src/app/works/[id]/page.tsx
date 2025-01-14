@@ -21,7 +21,6 @@ export default async function page(props: Props) {
         <p className={styles.contentTitle}>{content.title}</p>
         <img className={styles.image} src={content.image.url} alt={content.title} width={800} />
         <p className={styles.description}>{content.description}</p>
-        <div className={styles.tags}></div>
       </div>
     </div>
   )
