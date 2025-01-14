@@ -32,18 +32,21 @@
     .description {
       font-size: 20px;
       font-weight: 400;
+      margin-bottom: 8px;
     }
 
     .links {
       display: flex;
       width: fit-content;
-      gap: 0px 4px;
+      gap: 0 4px;
+      margin: 2px 0;
     }
 
     .tags {
       display: flex;
       width: fit-content;
-      gap: 0px 4px;
+      gap: 0 4px;
+      margin: 2px 0;
     }
   }
 }
