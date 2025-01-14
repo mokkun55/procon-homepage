@@ -13,7 +13,7 @@ export default async function Works() {
       title={work.title}
       id={work.id}
       date={work.date}
-      img={work.image.url}
+      image={work.image}
       description={work.description}
     />
   ))

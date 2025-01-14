@@ -1,19 +1,12 @@
 'use client'
 
+import type { WorksType } from '@/libs/cms/types/MicroCmsType'
 import { Card } from '@mantine/core'
 import dayjs from 'dayjs'
 import { useRouter } from 'next/navigation'
 import styles from './index.module.scss'
 
-type Props = {
-  id: string
-  title: string
-  date: Date
-  img: string
-  description: string
-}
-
-export const Work = ({ title, date, img, description, id }: Props) => {
+export const Work = ({ title, date, image, description, id }: WorksType) => {
   const formattedDate = dayjs(date).format('YYYY/MM/DD')
   const router = useRouter()
   return (
@@ -22,7 +15,7 @@ export const Work = ({ title, date, img, description, id }: Props) => {
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.date}>{formattedDate}</p>
       </div>
-      <img src={img} alt={title} />
+      <img src={image.url} alt={title} />
       <div className={styles.cardBottom}>
         <p>{description}</p>
       </div>
