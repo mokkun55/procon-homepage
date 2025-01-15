@@ -1,10 +1,16 @@
 import { pageMetadata } from '@/components/metadata'
 
 export const metadata = pageMetadata
+import { Post } from '@/components/features/Post'
 import { Section } from '@/components/features/Section'
+import { getContents } from '@/feature/cms/hooks/MicroCmsContents'
+import type { PostsType } from '@/libs/cms/types/MicroCmsType'
 import styles from './index.module.scss'
 
-const Home = () => {
+const Home = async () => {
+  const contents = (await getContents('posts')) as PostsType[]
+  const postElement = contents.map((post: PostsType) => <Post key={post.id} {...post} />)
+
   return (
     <div className={styles.container}>
       <div>
@@ -13,7 +19,9 @@ const Home = () => {
         </video>
       </div>
       <div className={styles.contentContainer}>
-        <Section sectionType="bottomLine" text="お知らせ" />
+        <Section sectionType="bottomLine" text="お知らせ">
+          {postElement}
+        </Section>
         <Section sectionType="bottomLine" text="部活紹介">
           <Section sectionType="leftLine" text="概要">
             <p>

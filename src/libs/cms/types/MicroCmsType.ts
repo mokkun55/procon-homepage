@@ -14,4 +14,8 @@ export type WorksType = {
 export type PostsType = {
   // TODO 仮置き
   id: string
+  title: string
+  date: Date
+  image: { url: string; height: number; width: number }
+  description: string
 }
