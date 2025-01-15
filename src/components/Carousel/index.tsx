@@ -5,29 +5,33 @@ import { Image } from '@mantine/core'
 
 type Props = {
   images: string[]
-  height: number
-  slideSize?: number
+  height?: string
   slideGap?: string
+  controlSize?: number
   loop?: boolean
   withIndicators?: boolean
 }
 
 export const Carousel = ({
   images,
-  height,
-  slideSize = 70,
+  height = '100%',
   slideGap = 'md',
+  controlSize = 40,
   loop = true,
   withIndicators = true,
 }: Props): React.ReactNode => {
-  console.log(images)
+  // 画像が1つしか無いとき
+  if (images.length === 1) {
+    return <Image src={images[0]} height={height} alt="image" />
+  }
+
   return (
     <MantineCarousel
-      slideSize={`${slideSize}%`}
       height={height}
       slideGap={slideGap}
       loop={loop}
       withIndicators={withIndicators}
+      controlSize={controlSize}
     >
       {images.map((image, index) => (
         <MantineCarousel.Slide key={image}>

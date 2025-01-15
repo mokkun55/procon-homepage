@@ -8,3 +8,12 @@ export const getContents = async (endpoint: 'works' | 'posts'): Promise<WorksTyp
 
   return data.contents
 }
+
+export const getContent = async (endpoint: 'works' | 'posts', id: string): Promise<WorksType | PostsType> => {
+  const data = await getClient().get({
+    endpoint: endpoint,
+    contentId: id,
+  })
+
+  return data
+}

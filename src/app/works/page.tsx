@@ -1,11 +1,11 @@
 import { Work } from '@/components/features/Work'
-import { getContents } from '@/feature/cms/hooks/getContents'
+import { getContents } from '@/feature/cms/hooks/MicroCmsContents'
 import type { WorksType } from '@/libs/cms/types/MicroCmsType'
 import { SimpleGrid } from '@mantine/core'
 import styles from './page.module.scss'
 
 export default async function Works() {
-  const worksContents = await getContents('works')
+  const worksContents = (await getContents('works')) as WorksType[]
 
   const worksElement = worksContents.map((work: WorksType) => (
     <Work
@@ -13,8 +13,10 @@ export default async function Works() {
       title={work.title}
       id={work.id}
       date={work.date}
-      image={work.image}
+      mainImage={work.mainImage}
       description={work.description}
+      tags={work.tags}
+      links={work.links}
     />
   ))
 
