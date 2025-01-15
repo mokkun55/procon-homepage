@@ -1,4 +1,5 @@
 import { Link } from '@/components/features/Link'
+import { Carousel } from '@/components/Carousel'
 import { Tags } from '@/components/features/Tags'
 import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
 import type { WorksType } from '@/libs/cms/types/MicroCmsType'
@@ -33,6 +34,16 @@ export default async function page(props: Props) {
           ))}
         </div>
       </div>
+      <Carousel
+        height={300}
+        images={[
+          '/testImgs/procon1.jpg',
+          '/testImgs/procon2.jpg',
+          '/testImgs/procon3.jpg',
+          '/testImgs/procon4.jpg',
+          '/testImgs/procon5.jpg',
+        ]}
+      />
     </div>
   )
 }
