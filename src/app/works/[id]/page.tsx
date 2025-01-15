@@ -1,5 +1,5 @@
+import { Carousel } from '@/components/Carousel'
 import { Link } from '@/components/features/Link'
-import type { symbolMapping } from '@/components/features/Link'
 import { Tags } from '@/components/features/Tags'
 import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
 import type { WorksType } from '@/libs/cms/types/MicroCmsType'
@@ -21,7 +21,16 @@ export default async function page(props: Props) {
       <p className={styles.title}>作品(詳細)</p>
       <div className={styles.contentContainer}>
         <p className={styles.contentTitle}>{content.title}</p>
-        <img className={styles.image} src={content.image.url} alt={content.title} />
+        <Carousel
+          height={300}
+          images={[
+            '/testImgs/procon1.jpg',
+            '/testImgs/procon2.jpg',
+            '/testImgs/procon3.jpg',
+            '/testImgs/procon4.jpg',
+            '/testImgs/procon5.jpg',
+          ]}
+        />
         <p className={styles.description}>{content.description}</p>
         <div className={styles.links}>
           {content.links
