@@ -1,5 +1,4 @@
 import { Link } from '@/components/features/Link'
-import type { symbolMapping } from '@/components/features/Link'
 import { Tags } from '@/components/features/Tags'
 import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
 import type { WorksType } from '@/libs/cms/types/MicroCmsType'
