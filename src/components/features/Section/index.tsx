@@ -13,7 +13,7 @@ const sectionTypeMapping = {
 
 export const Section = ({ text, sectionType, children }: props) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={sectionType === 'leftLine' ? { marginBottom: '32px' } : {}}>
       <div className={sectionTypeMapping[sectionType]}>
         <p className={styles.text}>{text}</p>
       </div>
