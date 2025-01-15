@@ -20,6 +20,11 @@ export const Carousel = ({
   loop = true,
   withIndicators = true,
 }: Props): React.ReactNode => {
+  // 画像が1つしか無いとき
+  if (images.length === 1) {
+    return <Image src={images[0]} height={height} alt="image" />
+  }
+
   return (
     <MantineCarousel
       height={height}
