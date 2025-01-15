@@ -1,0 +1,22 @@
+.container{
+    margin: 8px 0;
+
+    .bottomLine {
+        font-size: 20px;
+        width: 100%;
+        border-bottom: 1px solid var(--primary);
+    }
+
+    .leftLine {
+        font-size: 14px;
+        display: flex;
+    }
+    
+    .leftLine::before {
+        content: '';
+        display: inline-block;
+        border-left: 4px solid var(--primary);
+        margin-right: 4px;
+    }
+}
+
