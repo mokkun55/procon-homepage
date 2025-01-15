@@ -6,7 +6,7 @@ import dayjs from 'dayjs'
 import { useRouter } from 'next/navigation'
 import styles from './index.module.scss'
 
-export const Work = ({ title, date, image, description, id }: WorksType) => {
+export const Work = ({ title, date, mainImage, description, id }: WorksType) => {
   const formattedDate = dayjs(date).format('YYYY/MM/DD')
   const router = useRouter()
   return (
@@ -15,7 +15,7 @@ export const Work = ({ title, date, image, description, id }: WorksType) => {
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.date}>{formattedDate}</p>
       </div>
-      <img src={image.url} alt={title} />
+      <img src={mainImage.url} alt={title} />
       <div className={styles.cardBottom}>
         <p>{description}</p>
       </div>

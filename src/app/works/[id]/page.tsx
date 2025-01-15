@@ -22,14 +22,7 @@ export default async function page(props: Props) {
       <div className={styles.contentContainer}>
         <p className={styles.contentTitle}>{content.title}</p>
         <Carousel
-          height={300}
-          images={[
-            '/testImgs/procon1.jpg',
-            '/testImgs/procon2.jpg',
-            '/testImgs/procon3.jpg',
-            '/testImgs/procon4.jpg',
-            '/testImgs/procon5.jpg',
-          ]}
+          images={[content.mainImage.url, ...(content.subImage ? content.subImage.map((image) => image.url) : [])]}
         />
         <p className={styles.description}>{content.description}</p>
         <div className={styles.links}>
