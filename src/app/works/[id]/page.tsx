@@ -25,11 +25,13 @@ export default async function page(props: Props) {
           images={[content.mainImage.url, ...(content.subImage ? content.subImage.map((image) => image.url) : [])]}
         />
         <p className={styles.description}>{content.description}</p>
-        <div className={styles.links}>
-          {content.links
-            ? content.links.map((link) => <Link key={link.url} symbol={link.symbol} url={link.url} />)
-            : null}
-        </div>
+        {content.links && content.links.length !== 0 ? (
+          <div className={styles.links}>
+            {content.links.map((link) => (
+              <Link key={link.url} symbol={link.symbol} url={link.url} />
+            ))}
+          </div>
+        ) : null}
         <div className={styles.tags}>
           {content.tags.map((tag) => (
             <Tags key={tag} text={tag} />

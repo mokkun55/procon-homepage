@@ -8,7 +8,7 @@ export type WorksType = {
   subImage?: { url: string; height: number; width: number }[]
   description: string
   tags: string[]
-  links: { symbol: keyof typeof symbolMapping; url: string }[] | null
+  links?: { symbol: keyof typeof symbolMapping; url: string }[] | null
 }
 
 export type PostsType = {
