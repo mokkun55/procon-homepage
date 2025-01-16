@@ -5,11 +5,18 @@ import Link from 'next/link'
 export type Props = {
   link: string
   text: string
+  className?: string
 }
 
-export const LinkButton = async ({ text, link }: Props) => {
+export const LinkButton = async ({ text, link, className }: Props) => {
   return (
-    <MantineButton component={Link} variant="default" className={styles.button} radius="0" href={link}>
+    <MantineButton
+      component={Link}
+      variant="default"
+      className={`${styles.button} ${className}`}
+      radius="0"
+      href={link}
+    >
       {text}
     </MantineButton>
   )
