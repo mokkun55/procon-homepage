@@ -10,5 +10,17 @@
   .contentContainer {
     width: 90%;
     font-size: 12px;
+
+    .postSectionContainer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 16px;
+      }
+    }
   }
 }

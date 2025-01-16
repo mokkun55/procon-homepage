@@ -1,5 +1,4 @@
 import NextLink from 'next/link'
-import React from 'react'
 import { FaCode, FaFigma, FaGithub } from 'react-icons/fa'
 import styles from './index.module.scss'
 
