@@ -1,16 +1,15 @@
-'use client'
-
 import styles from '@/components/features/Button/index.module.scss'
 import { Button as MantineButton } from '@mantine/core'
+import Link from 'next/link'
 
 export type Props = {
-  onClick?: () => void
+  link: string
   text: string
 }
 
-export const BasicButton = async ({ text, onClick }: Props) => {
+export const LinkButton = async ({ text, link }: Props) => {
   return (
-    <MantineButton variant="default" className={styles.button} radius="0" onClick={onClick}>
+    <MantineButton component={Link} variant="default" className={styles.button} radius="0" href={link}>
       {text}
     </MantineButton>
   )
