@@ -1,8 +1,6 @@
 import { pageMetadata } from '@/components/metadata'
 
 export const metadata = pageMetadata
-import { BasicButton } from '@/components/features/Button/BasicButton'
-import { Button } from '@mantine/core'
 import styles from './index.module.scss'
 
 const Home = () => {
