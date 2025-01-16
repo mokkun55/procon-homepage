@@ -9,7 +9,7 @@ import styles from './index.module.scss'
 
 const Home = async () => {
   const contents = (await getContents('posts')) as PostsType[]
-  const postElement = contents.map((post: PostsType) => <Post key={post.id} {...post} />)
+  const postElement = contents.map((post: PostsType, index: number) => <Post key={post.id} {...post} index={index} />)
 
   return (
     <div className={styles.container}>

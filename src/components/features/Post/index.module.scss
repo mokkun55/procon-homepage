@@ -1,6 +1,16 @@
+.firstPost {
+    border: 2px solid var(--primary);
+    border-bottom: 0px;
+}
+
+.Post {
+    border: 2px solid var(--primary);
+}
+
 .container { 
     width: 100%;
     display: flex;
+    
 
     img {
         width: 60px;
