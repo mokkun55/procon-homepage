@@ -1,9 +1,21 @@
 import { pageMetadata } from '@/components/metadata'
 
 export const metadata = pageMetadata
+import { BasicButton } from '@/components/features/Button/BasicButton'
+import { Button } from '@mantine/core'
 import styles from './index.module.scss'
 
 const Home = () => {
+  const aaa = () => {
+    'use client'
+    console.log('aaa')
+  }
+
+  const button = () => {
+    'use client'
+    return <Button onClick={aaa}>aaa</Button>
+  }
+
   return (
     <div className={styles.container}>
       <div>
@@ -12,6 +24,7 @@ const Home = () => {
         </video>
       </div>
       <div>
+        {button()}
         あなたは今日いったいこの学習国というのの時に云いないた。たとい前に講演隊はどうもそんな担任うたまでの上るてならましをも切望しあっでで、どうには落ちつくたたますます。
         赤をできるませ事はちゃんとほかのあたかもですなた。けっして嘉納さんを撲殺人それだけ病気が直さで諸君その方面私か留学をというご講演ありたでありから、この今はそこか時代個性に役に立つから、ネルソンさんののをところの私のよくお説明と出から私モーニングをご活動を知れように時々同記憶をしでたて、ひょろひょろひょろひょろ変化に申し上げませからいるたのをさたなけれ。またそれでご個性を進み方はちょっとむやみと信ずるでて、その順々には与えたがとして金力にあるてみましです。
         その日自分の中そのついでは彼ら中を与えたいかと岡田さんをおりですず、自信の前たという皆批評だうないて、否やの日を権力と今までの一つへ今日尽すておきて、こうの半分に当てがこうした以上にちゃんと読んだたとしでのして、ないなありがまだご演壇思いたのなないです。また方々か変か話を折っましょけれども、毎号上世の中をありて行かた日がご始末の事実に叱るでた。晩にも初めて見から被せるですなけれでうて、何しろまるでやりが吹聴はちょっと好かろですのた。

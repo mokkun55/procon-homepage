@@ -1,37 +1,24 @@
 'use client'
 
-import {
-  Button as MantineButton,
-  MantineThemeProvider,
-  type VariantColorsResolver,
-  darken,
-  parseThemeColor,
-  rgba,
-} from '@mantine/core'
+import { Button as MantineButton } from '@mantine/core'
 import styles from './index.module.scss'
 
-const variantColorResolver: VariantColorsResolver = () => {
-  return {
-    background: rgba('var(--primary)', 0.05),
-    hover: rgba('var(--primary)', 0.15),
-    border: '2px solid var(--primary)',
-    color: darken('var(--primary)', 0.1),
-  }
-}
-
-type Props = {
-  className?: string
+export type Props = {
+  onClick?: () => void
   text: string
 }
 
-export const Button = (props: Props) => {
+export const Button = ({ text, onClick }: Props) => {
   return (
-    <MantineThemeProvider theme={{ variantColorResolver }}>
-      <div className={props.className}>
-        <MantineButton variant="primary" radius="0">
-          {props.text}
-        </MantineButton>
-      </div>
-    </MantineThemeProvider>
+    <MantineButton
+      variant="default"
+      className={styles.button}
+      radius="0"
+      onClick={() => {
+        console.log('aaa')
+      }}
+    >
+      {text}
+    </MantineButton>
   )
 }
