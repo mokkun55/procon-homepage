@@ -10,7 +10,7 @@ export type Props = {
   className?: string
 }
 
-export const LinkButton = async ({ text, link, className }: Props) => {
+export const LinkButton = ({ text, link, className }: Props) => {
   return (
     <MantineButton
       component={Link}
