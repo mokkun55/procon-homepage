@@ -1,3 +1,5 @@
+'use client'
+
 import styles from '@/components/features/Button/index.module.scss'
 import { Button as MantineButton } from '@mantine/core'
 import Link from 'next/link'
@@ -8,7 +10,7 @@ export type Props = {
   className?: string
 }
 
-export const LinkButton = async ({ text, link, className }: Props) => {
+export const LinkButton = ({ text, link, className }: Props) => {
   return (
     <MantineButton
       component={Link}
