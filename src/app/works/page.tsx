@@ -5,7 +5,7 @@ import { SimpleGrid } from '@mantine/core'
 import styles from './page.module.scss'
 
 export default async function Works() {
-  const worksContents = (await getContents('works')) as WorksType[]
+  const worksContents = (await getContents({ endpoint: 'works', limit: 10 })).contents as WorksType[]
 
   const worksElement = worksContents.map((work: WorksType) => (
     <Work
