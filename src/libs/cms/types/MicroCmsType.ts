@@ -12,6 +12,10 @@ export type WorksType = {
 }
 
 export type PostsType = {
-  // TODO 仮置き
   id: string
+}
+
+export type MicroCmsType = {
+  contents: WorksType[] | PostsType[]
+  totalCount: number
 }

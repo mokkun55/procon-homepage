@@ -1,12 +1,8 @@
 import { getClient } from '@/libs/cms/microCmsClient'
-import type { PostsType, WorksType } from '@/libs/cms/types/MicroCmsType'
+import type { MicroCmsType, PostsType, WorksType } from '@/libs/cms/types/MicroCmsType'
 import type { MicroCmsContentsType } from './MicroCmsContentsTypes'
 
-export const getContents = async ({
-  endpoint,
-  limit,
-  offset = 0,
-}: MicroCmsContentsType): Promise<WorksType[] | PostsType[]> => {
+export const getContents = async ({ endpoint, limit, offset = 0 }: MicroCmsContentsType): Promise<MicroCmsType> => {
   const data = await getClient().get({
     endpoint: endpoint,
     queries: {
@@ -15,7 +11,7 @@ export const getContents = async ({
     },
   })
 
-  return data.contents
+  return data
 }
 
 export const getContent = async (endpoint: 'works' | 'posts', id: string): Promise<WorksType | PostsType> => {

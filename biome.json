@@ -30,9 +30,11 @@
     "rules": {
       "recommended": true,
       "correctness": {
+        "recommended": true,
         "noUnusedImports": "error",
         "noUnusedVariables": "error",
-        "noUnusedFunctionParameters": "error"
+        "noUnusedFunctionParameters": "error",
+        "useExhaustiveDependencies": "error"
       }
     }
   }
