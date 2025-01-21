@@ -22,7 +22,7 @@ export const Carousel = ({
 }: Props): React.ReactNode => {
   // 画像が1つしか無いとき
   if (images.length === 1) {
-    return <Image src={images[0]} height={height} alt="image" />
+    return <Image src={images[0]} height={height} alt="work-image" />
   }
 
   return (
@@ -35,7 +35,7 @@ export const Carousel = ({
     >
       {images.map((image, index) => (
         <MantineCarousel.Slide key={image}>
-          <Image src={image} height={height} alt={`carousel-image-${index}`} />
+          <Image src={image} height={height} alt={`work-image-${index}`} />
         </MantineCarousel.Slide>
       ))}
     </MantineCarousel>
