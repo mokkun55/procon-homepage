@@ -23,8 +23,3 @@ export type MicroCmsType = {
   contents: WorksType[] | PostsType[]
   totalCount: number
 }
-
-export type MicroCmsType = {
-  contents: WorksType[] | PostsType[]
-  totalCount: number
-}

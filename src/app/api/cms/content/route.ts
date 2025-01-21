@@ -9,6 +9,6 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (!endpoint || !id || EndpointList.includes(endpoint) === false) {
     return NextResponse.json({ error: 'Invalid query parameters' }, { status: 400 })
   }
-  const contents = await getContent(endpoint, id)
+  const contents = await getContent({ endpoint, id })
   return NextResponse.json(contents)
 }
