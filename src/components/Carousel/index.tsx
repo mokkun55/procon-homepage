@@ -2,6 +2,7 @@
 
 import { Carousel as MantineCarousel } from '@mantine/carousel'
 import { Image } from '@mantine/core'
+import styles from './index.module.scss'
 
 type Props = {
   images: string[]
@@ -27,6 +28,9 @@ export const Carousel = ({
 
   return (
     <MantineCarousel
+      classNames={{
+        control: styles.control,
+      }}
       height={height}
       slideGap={slideGap}
       loop={loop}
