@@ -1,3 +1,20 @@
-.container{
-    // template
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 36px;
+
+    .loader {
+        position: absolute;
+    }
+
+    .pagination {
+        display:inline;
+        margin-top: 20px;
+    }
+}
+
+.dummy {
+    visibility: hidden;
 }
