@@ -14,7 +14,7 @@ type Props = {
 export default async function page(props: Props) {
   const params = await props.params
   const { id } = params
-  const content = (await getContent('works', id)) as WorksType
+  const content = (await getContent({ endpoint: 'works', id: id })) as WorksType
 
   return (
     <div className={styles.container}>

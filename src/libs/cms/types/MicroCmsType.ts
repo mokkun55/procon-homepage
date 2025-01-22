@@ -13,6 +13,10 @@ export type WorksType = {
 
 export type PostsType = {
   id: string
+  title: string
+  date: Date
+  image: { url: string; height: number; width: number }
+  description: string
 }
 
 export type MicroCmsType = {
