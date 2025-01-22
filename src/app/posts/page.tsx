@@ -3,31 +3,9 @@ import { Pagination } from '@/components/features/Pagination'
 import { Post } from '@/components/features/Post'
 import { getContentsApi } from '@/feature/cms/hooks/MicroCmsContents'
 import type { PostsType, WorksType } from '@/libs/cms/types/MicroCmsType'
-import { Loader } from '@mantine/core'
+import { createLoadingPosts } from '@/libs/post/createPostDummy'
 import { type JSX, useEffect, useState } from 'react'
 import styles from './page.module.scss'
-
-const createDummyElement = () => {
-  const dummyElement = []
-  for (let i = 0; i < 5; i++) {
-    dummyElement.push(
-      <Post
-        key={i}
-        index={i}
-        id="Dummy"
-        title=""
-        date={new Date()}
-        image={{
-          url: 'testImgs/mock1.png',
-          width: 1920,
-          height: 1080,
-        }}
-        description=""
-      />
-    )
-  }
-  return <div className={styles.dummy}>{dummyElement}</div>
-}
 
 export default function Posts() {
   const [contents, setContents] = useState<PostsType[]>([])
@@ -35,7 +13,7 @@ export default function Posts() {
   const [page, setPage] = useState(0)
   const [totalCount, setTotalCount] = useState(0)
   const CONTENTS_PER_PAGE = 5
-  const DUMMY_ELEMENT = createDummyElement()
+  const DUMMY_ELEMENT = createLoadingPosts(CONTENTS_PER_PAGE)
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
@@ -85,13 +63,7 @@ export default function Posts() {
 
   return (
     <div className={styles.container}>
-      {!postElement.get(page) || postElement.get(page)?.length === 0 ? (
-        <>
-          {DUMMY_ELEMENT} <Loader className={styles.loader} />
-        </>
-      ) : (
-        postElement.get(page)
-      )}
+      {!postElement.get(page) || postElement.get(page)?.length === 0 ? DUMMY_ELEMENT : postElement.get(page)}
       <Pagination
         total={totalCount / CONTENTS_PER_PAGE}
         activePages={page + 1}
