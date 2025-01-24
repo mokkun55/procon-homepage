@@ -12,6 +12,9 @@
     align-items: center;
     .title {
       font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .date {
       font-weight: 700;
