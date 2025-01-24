@@ -7,7 +7,6 @@ export const Header = () => {
     <div className={styles.container}>
       <div>
         <Link href="https://www.ktc.ac.jp/" className={styles.headerLeft}>
-          <Image src="/header/kindai-logo.png" width={30} height={30} alt="kutc-logo" className={styles.logo} />
           <h1 className={styles.title}>近畿大学工業高等専門学校</h1>
         </Link>
       </div>
