@@ -1,8 +1,12 @@
+'use client'
+import { Burger } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './index.module.scss'
 
 export const Header = () => {
+  const [opened, { toggle }] = useDisclosure()
   return (
     <div className={styles.container}>
       <div>
@@ -16,6 +20,7 @@ export const Header = () => {
           <h1 className={styles.title}>プログラミング技術部</h1>
           <Image src="/header/node-logo.png" width={30} height={30} alt="node-logo" className={styles.logo} />
         </Link>
+        <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" className={styles.burger} />
       </div>
     </div>
   )

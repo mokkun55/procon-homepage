@@ -12,6 +12,11 @@
   justify-content: space-between;
   font-size: 1.5rem;
 
+  @media (max-width: 768px) {
+    // TODO テキストどうにかする
+    font-size: 0.6rem;
+  }
+
   .headerLeft {
     display: flex;
     align-items: center;
@@ -31,6 +36,14 @@
 
     .logo {
       margin-left: 0.5rem;
+    }
+
+    .burger {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
   }
 }

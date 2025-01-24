@@ -29,13 +29,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${noto.variable} antialiased`}>
         <MantineProvider>
           <div className={styles.container}>
-            <Header />
+            <div className={styles.header}>
+              <Header />
+            </div>
             <div className={styles.contents}>
               <SideBar className={styles.sidebar} />
               <div className={styles.content}>{children}</div>
             </div>
+            <div className={styles.footer}>
+              <Footer />
+            </div>
           </div>
-          <Footer />
         </MantineProvider>
       </body>
     </html>
