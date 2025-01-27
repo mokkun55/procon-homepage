@@ -13,6 +13,7 @@ const Home = async () => {
       <div>
         <Carousel
           images={['/testImgs/mock1.png', '/testImgs/mock2.png', '/testImgs/mock3.png', '/testImgs/mock4.png']}
+          isAutoplay
         />
       </div>
       <div className={styles.contentContainer}>

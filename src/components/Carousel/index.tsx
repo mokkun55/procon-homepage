@@ -14,6 +14,7 @@ type Props = {
   loop?: boolean
   withIndicators?: boolean
   isAutoplay?: boolean
+  delay?: number
 }
 
 export const Carousel = ({
@@ -24,8 +25,9 @@ export const Carousel = ({
   loop = true,
   withIndicators = true,
   isAutoplay = false,
+  delay = 2000,
 }: Props): React.ReactNode => {
-  const autoplay = useRef(isAutoplay ? Autoplay({ delay: 2000 }) : null)
+  const autoplay = useRef(isAutoplay ? Autoplay({ delay }) : null)
 
   // 画像が1つしか無いとき
   if (images.length === 1) {
