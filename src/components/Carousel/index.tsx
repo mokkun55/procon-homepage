@@ -2,6 +2,8 @@
 
 import { Carousel as MantineCarousel } from '@mantine/carousel'
 import { Image } from '@mantine/core'
+import Autoplay from 'embla-carousel-autoplay'
+import { useRef } from 'react'
 import styles from './index.module.scss'
 
 type Props = {
@@ -11,6 +13,7 @@ type Props = {
   controlSize?: number
   loop?: boolean
   withIndicators?: boolean
+  isAutoplay?: boolean
 }
 
 export const Carousel = ({
@@ -20,7 +23,10 @@ export const Carousel = ({
   controlSize = 40,
   loop = true,
   withIndicators = true,
+  isAutoplay = false,
 }: Props): React.ReactNode => {
+  const autoplay = useRef(isAutoplay ? Autoplay({ delay: 2000 }) : null)
+
   // 画像が1つしか無いとき
   if (images.length === 1) {
     return <Image src={images[0]} height={height} alt="work-image" />
@@ -36,6 +42,9 @@ export const Carousel = ({
       loop={loop}
       withIndicators={withIndicators}
       controlSize={controlSize}
+      plugins={autoplay.current ? [autoplay.current] : []}
+      onMouseEnter={autoplay.current ? autoplay.current.stop : undefined}
+      onMouseLeave={autoplay.current ? autoplay.current.reset : undefined}
     >
       {images.map((image, index) => (
         <MantineCarousel.Slide key={image}>
