@@ -21,7 +21,6 @@ export default async function Works() {
   ))
 
   return (
-    // TODO 後々スケルトンとか表示したいな!
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title}>作品紹介</h1>
