@@ -25,7 +25,7 @@ export const Carousel = ({
   loop = true,
   withIndicators = true,
   isAutoplay = false,
-  delay = 2000,
+  delay = 4000,
 }: Props): React.ReactNode => {
   const autoplay = useRef(isAutoplay ? Autoplay({ delay }) : null)
 
