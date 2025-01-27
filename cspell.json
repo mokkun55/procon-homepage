@@ -1,6 +1,6 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["kindai", "kutc", "MICROCMS", "procon"],
+  "words": ["embla", "kindai", "kutc", "MICROCMS", "procon"],
   "ignorePaths": ["**/node_modules/**", "**/dist/**"]
 }
