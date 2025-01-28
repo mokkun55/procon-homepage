@@ -1,16 +1,18 @@
 import { Item } from '@/components/features/Item'
 import { Splitter } from '@/components/features/Splitter'
+import type { CSSProperties } from 'react'
 import styles from './index.module.scss'
 
 type Props = {
   className?: string
   isOpen?: boolean
+  style?: CSSProperties
 }
 
-export const SideBar = ({ className, isOpen }: Props) => {
+export const SideBar = ({ className, style }: Props) => {
   return (
-    <div className={className} style={{ display: isOpen ? 'block' : 'none' }}>
-      <div className={styles.container} style={{}}>
+    <div className={className} style={style}>
+      <div className={styles.container} style={style}>
         <Item url="/" text="ホーム" size="big" />
         <Splitter text="入学生向け">
           <Item url="/registration" text="入部届" size="default" />
