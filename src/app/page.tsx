@@ -1,6 +1,3 @@
-import { pageMetadata } from '@/components/metadata'
-
-export const metadata = pageMetadata
 import { Carousel } from '@/components/Carousel'
 import { Posts } from '@/components/features/Posts'
 import { Section } from '@/components/features/Section'
