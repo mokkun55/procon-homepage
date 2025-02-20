@@ -2,7 +2,7 @@
 import { Pagination } from '@/components/features/Pagination'
 import { Post } from '@/components/features/Post'
 import { getContentsApi } from '@/feature/cms/hooks/MicroCmsContents'
-import type { PostsType, WorksType } from '@/libs/cms/types/MicroCmsType'
+import type { PostsType } from '@/libs/cms/types/MicroCmsType'
 import { createLoadingPosts } from '@/libs/post/createPostDummy'
 import { type JSX, useEffect, useState } from 'react'
 import styles from './page.module.scss'
@@ -25,8 +25,9 @@ export default function Posts() {
           id={content.id}
           title={content.title}
           date={content.date}
-          image={content.image}
+          mainImage={content.mainImage}
           description={content.description}
+          contents={content.contents}
         />
       )
     })
@@ -38,28 +39,16 @@ export default function Posts() {
   useEffect(() => {
     const fetchContents = async () => {
       const contents = await getContentsApi({
-        endpoint: 'works',
+        endpoint: 'posts',
         limit: CONTENTS_PER_PAGE,
         offset: page * CONTENTS_PER_PAGE,
       })
-      const json = contents.contents as WorksType[]
+      const contentsList = contents.contents as PostsType[]
       if (totalCount === 0) setTotalCount(contents.totalCount)
-      const convertedContents = json.map((content: WorksType) => convertContents(content))
-      setContents(convertedContents)
+      setContents(contentsList)
     }
     if (!postElement.has(page) || postElement.get(page)?.length === 0) fetchContents()
   }, [page])
-
-  const convertContents = (contents: WorksType): PostsType => {
-    const convertedContents: PostsType = {
-      id: contents.id,
-      title: contents.title,
-      date: contents.date,
-      image: contents.mainImage,
-      description: contents.description,
-    }
-    return convertedContents
-  }
 
   return (
     <div className={styles.container}>
