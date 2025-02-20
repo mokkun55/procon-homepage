@@ -10,8 +10,8 @@ import styles from './page.module.scss'
 export default function Posts() {
   const [contents, setContents] = useState<PostsType[]>([])
   const [postElement, setPostElement] = useState(new Map<number, JSX.Element[]>())
-  const [page, setPage] = useState(0)
-  const [totalCount, setTotalCount] = useState(0)
+  const [page, setPage] = useState<number>(0)
+  const [totalCount, setTotalCount] = useState<number>(0)
   const CONTENTS_PER_PAGE = 5
   const DUMMY_ELEMENT = createLoadingPosts(CONTENTS_PER_PAGE)
 
