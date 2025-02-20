@@ -1,0 +1,30 @@
+.container { 
+    
+    .contentsContainer {
+        display: flex;
+
+        .sidebar {
+            position: inherit;
+            width: 25%;
+        }
+
+        .contents { 
+            padding: 0 1rem !important;
+            width: 75%;
+        }
+
+        @media (max-width: 768px) {
+            
+            .sidebar {
+                width: 100%;
+                position: fixed;
+            }
+
+            .contents {
+                width: 100%;
+            }
+            
+        }
+    }
+
+}
