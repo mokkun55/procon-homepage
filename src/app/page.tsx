@@ -15,9 +15,12 @@ const Home = async () => {
         />
       </div>
       <div className={styles.contentContainer}>
+        {/* お知らせ一覧 */}
         <Section sectionType="bottomLine" text="お知らせ">
           <Posts />
         </Section>
+
+        {/* 部活紹介 */}
         <Section sectionType="bottomLine" text="部活紹介">
           <Section sectionType="leftLine" text="概要">
             <p>
