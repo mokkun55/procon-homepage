@@ -9,6 +9,10 @@ import 'dayjs/locale/ja'
 import { Layout } from '@/components/Layout'
 dayjs.locale('ja')
 
+import { pageMetadata } from '@/components/metadata'
+
+export const metadata = pageMetadata
+
 // フォント指定
 const noto = Noto_Sans_JP({
   weight: ['400', '700'],

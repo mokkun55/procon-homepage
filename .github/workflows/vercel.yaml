@@ -22,7 +22,7 @@ jobs:
 
       # 3. 依存関係のインストール
       - name: Install dependencies
-      # TODO --legacy-peer-deps は 依存環境で発生するエラーを無視するオプション
+      # FIXME --legacy-peer-deps は 依存環境で発生するエラーを無視するオプション
         run: |
           npm install --legacy-peer-deps
 

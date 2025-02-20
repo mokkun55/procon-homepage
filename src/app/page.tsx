@@ -1,6 +1,4 @@
-import { pageMetadata } from '@/components/metadata'
-
-export const metadata = pageMetadata
+import { Carousel } from '@/components/Carousel'
 import { Posts } from '@/components/features/Posts'
 import { Section } from '@/components/features/Section'
 import styles from './index.module.scss'
@@ -8,10 +6,13 @@ import styles from './index.module.scss'
 const Home = async () => {
   return (
     <div className={styles.container}>
+      {/* メイン画像(スライドショー) */}
       <div>
-        <video autoPlay loop playsInline muted poster="/introduction/topMovie_720p.jpg" className={styles.video}>
-          <source src="/introduction/topMovie_720p.mp4" type="video/mp4" />
-        </video>
+        {/* TODO 画像は仮置き */}
+        <Carousel
+          images={['/testImgs/mock1.png', '/testImgs/mock2.png', '/testImgs/mock3.png', '/testImgs/mock4.png']}
+          isAutoplay
+        />
       </div>
       <div className={styles.contentContainer}>
         <Section sectionType="bottomLine" text="お知らせ">
