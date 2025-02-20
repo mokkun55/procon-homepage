@@ -1,4 +1,9 @@
 .container { 
+
+    max-width: 1400px;
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
     
     .contentsContainer {
         display: flex;
@@ -6,6 +11,9 @@
         .sidebar {
             position: inherit;
             width: 25%;
+            padding: 0 1rem;
+            color: var(--text-primary);
+            font-weight: 700;
         }
 
         .contents { 
@@ -25,6 +33,11 @@
             }
             
         }
+    }
+
+    .footer {
+        position: inherit;
+        margin: 0 calc(50% - 50vw);
     }
 
 }

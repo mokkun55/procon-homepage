@@ -1,7 +1,10 @@
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { SideBar } from '@/components/SideBar'
 import { AppShell as MantineAppShell } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
+import { usePathname, useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
 import styles from './index.module.scss'
 
 type Props = {
@@ -11,6 +14,16 @@ type Props = {
 export const AppShell = (props: Props) => {
   const breakPoint = '768px'
   const [opened, { toggle }] = useDisclosure()
+
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  useEffect(() => {
+    if (opened) {
+      toggle()
+    }
+  }, [pathname, searchParams])
+
   return (
     <MantineAppShell
       header={{ height: '50px' }}
@@ -23,7 +36,7 @@ export const AppShell = (props: Props) => {
       withBorder={false}
       className={styles.container}
     >
-      <MantineAppShell.Header style={{ position: 'sticky' }}>
+      <MantineAppShell.Header style={{ position: 'sticky', zIndex: 10000 }}>
         {/* <Burger opened={opened} onClick={toggle} hiddenFrom={breakPoint} size="sm" /> */}
         <Header opened={opened} toggle={toggle} hiddenFrom={breakPoint} />
       </MantineAppShell.Header>
@@ -35,6 +48,9 @@ export const AppShell = (props: Props) => {
 
         <MantineAppShell.Main className={styles.contents}>{props.children}</MantineAppShell.Main>
       </div>
+      <MantineAppShell.Footer className={styles.footer}>
+        <Footer />
+      </MantineAppShell.Footer>
     </MantineAppShell>
   )
 }
