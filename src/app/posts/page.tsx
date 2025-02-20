@@ -54,7 +54,7 @@ export default function Posts() {
     <div className={styles.container}>
       {!postElement.get(page) || postElement.get(page)?.length === 0 ? DUMMY_ELEMENT : postElement.get(page)}
       <Pagination
-        total={totalCount / CONTENTS_PER_PAGE}
+        total={Math.ceil(totalCount / CONTENTS_PER_PAGE)}
         activePages={page + 1}
         onChange={(page) => {
           setPage(page - 1)
