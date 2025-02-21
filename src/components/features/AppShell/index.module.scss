@@ -1,0 +1,43 @@
+.container { 
+
+    max-width: 1400px;
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .contentsContainer {
+        display: flex;
+
+        .sidebar {
+            position: inherit;
+            width: 25%;
+            padding: 0 1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .contents { 
+            padding: 0 1rem !important;
+            width: 75%;
+        }
+
+        @media (max-width: 768px) {
+            
+            .sidebar {
+                width: 100%;
+                position: fixed;
+            }
+
+            .contents {
+                width: 100%;
+            }
+            
+        }
+    }
+
+    .footer {
+        position: inherit;
+        margin: 0 calc(50% - 50vw);
+    }
+
+}
