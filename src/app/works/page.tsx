@@ -28,7 +28,14 @@ export default async function Works() {
       </div>
 
       {/* TODO レスポンシブデザイン */}
-      <SimpleGrid cols={3} className={styles.works}>
+      <SimpleGrid
+        cols={{
+          sm: 1,
+          md: 2,
+          lg: 3,
+        }}
+        className={styles.works}
+      >
         {worksElement}
       </SimpleGrid>
     </div>
