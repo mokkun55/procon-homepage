@@ -20,18 +20,23 @@ jobs:
         with:
           node-version: '20.17.0' # 使用するNode.jsのバージョン
 
-      # 3. 依存関係のインストール
+      # 3. キャッシュの削除
+      - name: Clear Cache
+        run: |
+          rm -rf node_modules/.cache
+          npm cache clean --force
+
+      # 4. 依存関係のインストール
       - name: Install dependencies
-      # FIXME --legacy-peer-deps は 依存環境で発生するエラーを無視するオプション
         run: |
           npm install --legacy-peer-deps
 
-      # 4. Vercel CLIのインストール
+      # 5. Vercel CLIのインストール
       - name: Install Vercel CLI
         run: |
           npm install -g vercel
 
-      # 5. Vercelへのデプロイ
+      # 6. Vercelへのデプロイ
       - name: Deploy to Vercel
         run: |
           vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --confirm
