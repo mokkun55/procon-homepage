@@ -27,8 +27,14 @@ export default async function Works() {
         <p className={styles.description}>画像クリックで詳細ページに移動できます</p>
       </div>
 
-      {/* TODO レスポンシブデザイン */}
-      <SimpleGrid cols={3} className={styles.works}>
+      <SimpleGrid
+        cols={{
+          sm: 1,
+          md: 2,
+          lg: 3,
+        }}
+        className={styles.works}
+      >
         {worksElement}
       </SimpleGrid>
     </div>
