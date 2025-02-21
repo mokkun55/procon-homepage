@@ -22,7 +22,7 @@ export const SideBar = ({ className, style }: Props) => {
         <Splitter text="部員向け">
           <Item url="/schedule" text="予定" size="default" />
           <Item url="/posts" text="お知らせ" size="default" />
-          <Item url="/absence" text="欠席連絡フォーム" size="default" />
+          <Item url="https://procon-absence-form-3d1be.firebaseapp.com/" text="欠席連絡フォーム" size="default" />
         </Splitter>
         <Splitter text="開発">
           <Item url="/development" text="開発の余談" size="default" />
