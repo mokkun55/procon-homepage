@@ -3,10 +3,14 @@ import { Splitter } from '@/components/features/Splitter'
 import Link from 'next/link'
 import styles from './index.module.scss'
 
+type Props = {
+  className?: string
+}
+
 //TODOフッターリンク
-export const Footer = () => {
+export const Footer = (props: Props) => {
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} ${props.className}`}>
       <div className={styles.container}>
         <div className={styles.topText}>
           <Link href="https://www.ktc.ac.jp/">

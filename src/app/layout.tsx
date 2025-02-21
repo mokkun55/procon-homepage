@@ -1,15 +1,12 @@
 import './globals.css'
 import './variables.css'
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { SideBar } from '@/components/SideBar'
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core'
 import '@mantine/core/styles.css'
 import '@mantine/carousel/styles.css'
 import dayjs from 'dayjs'
 import { Noto_Sans_JP } from 'next/font/google'
-import styles from './layout.module.scss'
 import 'dayjs/locale/ja'
+import { Layout } from '@/components/Layout'
 dayjs.locale('ja')
 
 import { pageMetadata } from '@/components/metadata'
@@ -32,14 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${noto.variable} antialiased`}>
         <MantineProvider>
-          <div className={styles.container}>
-            <Header />
-            <div className={styles.contents}>
-              <SideBar className={styles.sidebar} />
-              <div className={styles.content}>{children}</div>
-            </div>
-          </div>
-          <Footer />
+          <Layout>{children}</Layout>
         </MantineProvider>
       </body>
     </html>
