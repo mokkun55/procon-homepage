@@ -3,7 +3,7 @@ import { Header } from '@/components/Header'
 import { SideBar } from '@/components/SideBar'
 import { AppShell as MantineAppShell } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 import styles from './index.module.scss'
 
@@ -16,13 +16,12 @@ export const AppShell = (props: Props) => {
   const [opened, { toggle }] = useDisclosure()
 
   const pathname = usePathname()
-  const searchParams = useSearchParams()
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     if (opened) {
       toggle()
     }
-  }, [pathname, searchParams])
+  }, [pathname])
 
   return (
     <MantineAppShell
