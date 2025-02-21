@@ -37,7 +37,6 @@ export const AppShell = (props: Props) => {
       className={styles.container}
     >
       <MantineAppShell.Header style={{ position: 'sticky', zIndex: 10000 }}>
-        {/* <Burger opened={opened} onClick={toggle} hiddenFrom={breakPoint} size="sm" /> */}
         <Header opened={opened} toggle={toggle} hiddenFrom={breakPoint} />
       </MantineAppShell.Header>
 
