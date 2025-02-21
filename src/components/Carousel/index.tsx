@@ -4,7 +4,7 @@ import { Carousel as MantineCarousel } from '@mantine/carousel'
 import { Image } from '@mantine/core'
 import Autoplay from 'embla-carousel-autoplay'
 import { useRef } from 'react'
-import styles from './index.module.scss'
+import '@mantine/carousel'
 
 type Props = {
   images: string[]
@@ -36,9 +36,6 @@ export const Carousel = ({
 
   return (
     <MantineCarousel
-      classNames={{
-        control: styles.control,
-      }}
       height={height}
       slideGap={slideGap}
       loop={loop}
