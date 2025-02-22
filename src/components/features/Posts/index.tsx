@@ -1,6 +1,6 @@
 'use client'
 import { getContentsApi } from '@/feature/cms/hooks/MicroCmsContents'
-import type { PostsType, WorksType } from '@/libs/cms/types/MicroCmsType'
+import type { PostsType } from '@/libs/cms/types/MicroCmsType'
 import { createLoadingPosts } from '@/libs/post/createPostDummy'
 import { type JSX, useEffect, useRef, useState } from 'react'
 import { LinkButton } from '../Button/LinkButton'
@@ -16,10 +16,9 @@ export const Posts = () => {
   useEffect(() => {
     if (!isFirstRender.current) return
     const fetchContents = async () => {
-      const contents = await getContentsApi({ endpoint: 'works', limit: 5 })
-      const json = contents.contents as WorksType[]
-      const convertedContents = json.map((content: WorksType) => convertContents(content))
-      const Element = convertedContents.map((content, index) => {
+      const contents = await getContentsApi({ endpoint: 'posts', limit: 5 })
+      const contentsList = contents.contents as PostsType[]
+      const Element = contentsList.map((content, index) => {
         return (
           <Post
             key={content.id}
@@ -27,8 +26,9 @@ export const Posts = () => {
             id={content.id}
             title={content.title}
             date={content.date}
-            image={content.image}
+            mainImage={content.mainImage}
             description={content.description}
+            contents={content.contents}
           />
         )
       })
@@ -37,17 +37,6 @@ export const Posts = () => {
     isFirstRender.current = false
     fetchContents()
   }, [])
-
-  const convertContents = (contents: WorksType): PostsType => {
-    const convertedContents: PostsType = {
-      id: contents.id,
-      title: contents.title,
-      date: contents.date,
-      image: contents.mainImage,
-      description: contents.description,
-    }
-    return convertedContents
-  }
 
   return (
     <div className={styles.container}>

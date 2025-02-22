@@ -12,12 +12,13 @@ export const createDummyPosts = (amount: number) => {
         id="Dummy"
         title=""
         date={new Date()}
-        image={{
+        mainImage={{
           url: 'testImgs/mock1.png',
           width: 1920,
           height: 1080,
         }}
         description=""
+        contents={''}
       />
     )
   }
