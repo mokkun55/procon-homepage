@@ -75,7 +75,6 @@ export default function Works() {
       </div>
       <InfiniteScroll
         next={() => {
-          console.log('next')
           page.current++
           loadMore()
         }}
