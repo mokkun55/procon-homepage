@@ -30,26 +30,21 @@ export default async function page(props: Props) {
       const code = (codeTag.children[0] as CmsElement).data
       const language = codeTag.attribs.class.replace('language-', '')
       const parentTag = dom.parent as CmsElement
-      const fileNameAttribute = parentTag.attributes.find((attr) => attr.name === 'data-filename')
-      if (!fileNameAttribute)
-        return (
-          <div className={styles.codeContainer}>
-            <SyntaxHighlighter language={language} style={monokai}>
-              {code}
-            </SyntaxHighlighter>
-          </div>
-        )
-      const fileName = fileNameAttribute.value
+      let _fileName: string | null = null
+      if (parentTag !== null) {
+        const fileNameAttribute = parentTag.attributes.find((attr) => attr.name === 'data-filename')
+        if (fileNameAttribute) _fileName = fileNameAttribute.value
+      }
       return (
         <div className={styles.codeContainer}>
-          <div className={styles.fileNameContainer}>
-            <span className={styles.fileName}>{fileName}</span>
-          </div>
+          {_fileName ? (
+            <div className={styles.fileNameContainer}>
+              <span className={styles.fileName}>{_fileName}</span>
+            </div>
+          ) : null}
           <div className={styles.code}>
             <SyntaxHighlighter language={language} style={monokai} showLineNumbers>
-              {/* TODO この文字列の長さで来ると全然バグる */}
-              {/* {code} */}
-              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+              {code}
             </SyntaxHighlighter>
           </div>
         </div>
