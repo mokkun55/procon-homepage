@@ -21,21 +21,11 @@
     display: flex;
     align-items: center;
 
-    .logo {
-      margin-right: 0.5rem;
-    }
-
-    .title {
+    .link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
       color: var(--text-header-primary);
-    }
-  }
-
-  .headerRight {
-    display: flex;
-    align-items: center;
-
-    .logo {
-      margin-left: 0.5rem;
     }
 
     .burger {
@@ -45,7 +35,16 @@
         display: block;
       }
     }
+
+    .logo {
+      margin-right: 0.5rem;
+    }
+
+    .title {
+      color: var(--text-header-primary);
+    }
   }
+  
 }
 
 
