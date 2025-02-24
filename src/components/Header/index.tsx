@@ -14,13 +14,7 @@ type Props = {
 export const Header = (props: Props) => {
   return (
     <div className={`${styles.container} ${props.className}`}>
-      <div>
-        <Link href="/" className={styles.headerLeft}>
-          <Image src="/header/procon.png" width={30} height={30} alt="kutc-logo" className={styles.logo} />
-          <h1 className={styles.title}>近畿大学工業高等専門学校プログラミング技術部</h1>
-        </Link>
-      </div>
-      <div className={styles.headerRight}>
+      <div className={styles.headerLeft}>
         <Burger
           opened={props.opened}
           onClick={props.toggle}
@@ -28,6 +22,10 @@ export const Header = (props: Props) => {
           aria-label="Toggle navigation"
           className={styles.burger}
         />
+        <Link href="/" className={styles.link}>
+          <Image src="/header/procon.png" width={30} height={30} alt="kutc-logo" className={styles.logo} />
+          <h1 className={styles.title}>近畿大学工業高等専門学校プログラミング技術部</h1>
+        </Link>
       </div>
     </div>
   )
