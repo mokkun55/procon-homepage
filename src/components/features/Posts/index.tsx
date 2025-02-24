@@ -28,7 +28,7 @@ export const Posts = () => {
             date={content.date}
             mainImage={content.mainImage}
             description={content.description}
-            contents={content.contents}
+            content={content.content}
           />
         )
       })

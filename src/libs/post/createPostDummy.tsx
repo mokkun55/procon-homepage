@@ -18,7 +18,7 @@ export const createDummyPosts = (amount: number) => {
           height: 1080,
         }}
         description=""
-        contents={''}
+        content={''}
       />
     )
   }
