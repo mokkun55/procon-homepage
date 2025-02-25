@@ -10,7 +10,7 @@ const Home = async () => {
       <div>
         {/* TODO 画像は仮置き */}
         <Carousel
-          images={['/testImgs/mock1.png', '/testImgs/mock2.png', '/testImgs/mock3.png', '/testImgs/mock4.png']}
+          images={['/testImgs/mock1.png', '/testImgs/ptc/procon1.png', '/testImgs/mock3.png', '/testImgs/mock4.png']}
           isAutoplay
         />
       </div>
