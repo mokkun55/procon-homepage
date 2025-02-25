@@ -165,6 +165,7 @@ body {
   color: var(--text-header-primary);
   background: var(--body-primary-bg);
   font-family: var(--font-noto-sans-jp);
+  overflow-x: hidden;
 }
 
 html {
