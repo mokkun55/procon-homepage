@@ -12,14 +12,14 @@ export const pageMetadata = {
     //url: '',
     siteName: '近大高専プロコン部',
     // TODO 画像がないので作ったら書き直す予定
-    /*images: [
-        {
-          url: 'https://example.com/og-image.jpg',
-          width: 800,
-          height: 600,
-          alt: 'ブログ記事の画像',
-        },
-      ],*/
+    images: [
+      {
+        url: '/testImgs/mock1.png',
+        width: 800,
+        height: 600,
+        alt: 'ブログ記事の画像',
+      },
+    ],
     locale: 'ja_JP',
     type: 'website',
   },
