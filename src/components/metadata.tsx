@@ -11,10 +11,10 @@ export const pageMetadata = {
     // TODO 本番環境用がないから出来てから書く予定
     //url: '',
     siteName: '近大高専プロコン部',
-    // TODO 画像がないので作ったら書き直す予定
     images: [
       {
-        url: '/testImgs/mock1.png',
+        //TODO testImgsなので後で差し替え
+        url: 'https://procon-homepage.vercel.app/testImgs/mock2.png',
         width: 800,
         height: 600,
         alt: 'ブログ記事の画像',
