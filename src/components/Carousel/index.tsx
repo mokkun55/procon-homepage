@@ -1,5 +1,6 @@
 'use client'
 
+import styles from '@/components/Carousel/index.module.scss'
 import { Carousel as MantineCarousel } from '@mantine/carousel'
 import { Image } from '@mantine/core'
 import Autoplay from 'embla-carousel-autoplay'
@@ -46,7 +47,7 @@ export const Carousel = ({
       withIndicators={withIndicators}
       controlSize={controlSize}
       plugins={autoplay.current ? [autoplay.current] : []}
-      className="custom-carousel"
+      classNames={{ control: styles.control, indicator: styles.indicator }}
       onMouseEnter={autoplay.current ? autoplay.current.stop : undefined}
       onMouseLeave={autoplay.current ? autoplay.current.reset : undefined}
     >

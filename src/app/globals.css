@@ -171,14 +171,3 @@ body {
 html {
   scrollbar-gutter: stable;
 }
-
-.custom-carousel .mantine-Carousel-control {
-  background-color: white !important;
-  color: black !important;
-  border: 1px solid black !important;
-  opacity: 1 !important;
-}
-
-.m_87cf2631 {
-  background-color: white !important;
-}
