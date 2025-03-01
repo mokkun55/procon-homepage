@@ -1,14 +1,14 @@
 'use client'
 
+import styles from '@/components/Carousel/index.module.scss'
 import { Carousel as MantineCarousel } from '@mantine/carousel'
 import { Image } from '@mantine/core'
 import Autoplay from 'embla-carousel-autoplay'
-import { useRef } from 'react'
-import '@mantine/carousel'
+import { useEffect, useRef } from 'react'
 
 type Props = {
   images: string[]
-  height?: string
+  height?: number | string
   slideGap?: string
   controlSize?: number
   loop?: boolean
@@ -27,9 +27,14 @@ export const Carousel = ({
   isAutoplay = false,
   delay = 4000,
 }: Props): React.ReactNode => {
-  const autoplay = useRef(isAutoplay ? Autoplay({ delay }) : null)
+  const autoplay = useRef<ReturnType<typeof Autoplay> | null>(null)
 
-  // 画像が1つしか無いとき
+  useEffect(() => {
+    if (isAutoplay) {
+      autoplay.current = Autoplay({ delay })
+    }
+  }, [isAutoplay, delay])
+
   if (images.length === 1) {
     return <Image src={images[0]} height={height} alt="work-image" />
   }
@@ -42,6 +47,7 @@ export const Carousel = ({
       withIndicators={withIndicators}
       controlSize={controlSize}
       plugins={autoplay.current ? [autoplay.current] : []}
+      classNames={{ control: styles.control, indicator: styles.indicator }}
       onMouseEnter={autoplay.current ? autoplay.current.stop : undefined}
       onMouseLeave={autoplay.current ? autoplay.current.reset : undefined}
     >
