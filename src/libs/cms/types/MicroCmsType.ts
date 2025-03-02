@@ -17,7 +17,7 @@ export type PostsType = {
   date: Date
   mainImage: { url: string; height: number; width: number }
   description: string
-  contents: string
+  content: string
 }
 
 export type MicroCmsType = {

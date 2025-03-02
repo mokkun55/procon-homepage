@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" {...mantineHtmlProps}>
       <head>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css" />
         <ColorSchemeScript />
       </head>
       <body className={`${noto.variable} antialiased`}>
