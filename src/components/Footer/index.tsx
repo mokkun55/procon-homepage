@@ -23,7 +23,7 @@ export const Footer = (props: Props) => {
         <div className={styles.footerColumn}>
           <div className={styles.column}>
             <Splitter text="入学生向け">
-              <Item url="/registration" text="入部届け" size="default" />
+              <Item url="https://forms.gle/qT41wWxK1Fq5Y5fK6" text="入部届" size="default" />
               <Item url="/activity" text="活動日及び活動場所" size="default" />
               <Item url="/works" text="作品一覧" size="default" />
             </Splitter>

@@ -6,7 +6,7 @@
     
         .sidebar {
             width: 25%;
-            padding: 0 1rem;
+            padding: 0 1rem !important;
             color: var(--text-primary);
             font-weight: 700;
         }
@@ -36,7 +36,7 @@
             .contents {
     
                 .content{
-                    width: 100%;
+                    width: 75%;
                     overflow: hidden;
                 }
             
