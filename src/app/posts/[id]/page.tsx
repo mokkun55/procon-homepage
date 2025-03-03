@@ -2,6 +2,7 @@ import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
 import type { PostsType } from '@/libs/cms/types/MicroCmsType'
 import dayjs from 'dayjs'
 import parser, { type DOMNode, type Element } from 'html-react-parser'
+import type { Metadata } from 'next'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { monokai } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import styles from './page.module.scss'
@@ -12,10 +13,36 @@ type Props = {
   }>
 }
 
+type Params = {
+  params: {
+    id: string
+  }
+}
+
 type CmsElement = DOMNode &
   Element & {
     data: string
   }
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { id } = await params
+  const content = (await getContent({ endpoint: 'posts', id: id })) as PostsType
+
+  return {
+    openGraph: {
+      siteName: '近大高専プロコン部',
+      title: `お知らせ : ${content.title}`,
+      description: content.description,
+      images: [
+        {
+          url: content.mainImage.url,
+          width: content.mainImage.width,
+          height: content.mainImage.height,
+        },
+      ],
+    },
+  }
+}
 
 export default async function page(props: Props) {
   const params = await props.params
