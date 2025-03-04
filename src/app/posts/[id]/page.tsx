@@ -18,9 +18,13 @@ type CmsElement = DOMNode &
     data: string
   }
 
-export async function generateMetadata(props: Props): Promise<Metadata> {
+type Params = Promise<{ id: string }>
+
+export async function generateMetadata(props: {
+  params: Params
+}): Promise<Metadata> {
   const params = await props.params
-  const { id } = params
+  const id = params.id
   const content = (await getContent({ endpoint: 'posts', id: id })) as PostsType
 
   return {

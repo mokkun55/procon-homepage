@@ -12,9 +12,13 @@ type Props = {
   }>
 }
 
-export async function generateMetadata(props: Props): Promise<Metadata> {
+type Params = Promise<{ id: string }>
+
+export async function generateMetadata(props: {
+  params: Params
+}): Promise<Metadata> {
   const params = await props.params
-  const { id } = params
+  const id = params.id
   const content = (await getContent({ endpoint: 'works', id: id })) as WorksType
 
   return {
