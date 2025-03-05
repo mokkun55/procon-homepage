@@ -1,4 +1,5 @@
 import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
+import { generateMicroCmsMetadata, type ogpParams } from '@/feature/ogp/cmsOgp'
 import type { PostsType } from '@/libs/cms/types/MicroCmsType'
 import dayjs from 'dayjs'
 import parser, { type DOMNode, type Element } from 'html-react-parser'
@@ -18,29 +19,8 @@ type CmsElement = DOMNode &
     data: string
   }
 
-type Params = Promise<{ id: string }>
-
-export async function generateMetadata(props: {
-  params: Params
-}): Promise<Metadata> {
-  const params = await props.params
-  const id = params.id
-  const content = (await getContent({ endpoint: 'posts', id: id })) as PostsType
-
-  return {
-    openGraph: {
-      siteName: '近大高専プロコン部',
-      title: `お知らせ : ${content.title}`,
-      description: content.description,
-      images: [
-        {
-          url: content.mainImage.url,
-          width: content.mainImage.width,
-          height: content.mainImage.height,
-        },
-      ],
-    },
-  }
+export async function generateMetadata(props: ogpParams): Promise<Metadata> {
+  return generateMicroCmsMetadata({ endpoint: 'posts', params: props.params })
 }
 
 export default async function page(props: Props) {
