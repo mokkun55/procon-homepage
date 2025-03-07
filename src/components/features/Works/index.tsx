@@ -10,7 +10,7 @@ import styles from './index.module.scss'
 
 type Props = {
   useInfinityScroll?: boolean
-  contentsPerPage: number
+  contentsPerPage?: number
   gridCols?: {
     sm?: number
     md?: number
