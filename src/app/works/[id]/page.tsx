@@ -2,7 +2,7 @@ import { Carousel } from '@/components/Carousel'
 import { Link } from '@/components/features/Link'
 import { Tags } from '@/components/features/Tags'
 import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
-import { generateMicroCmsMetadata, type ogpParams } from '@/feature/ogp/cmsOgp'
+import { type OgpParams, generateMicroCmsMetadata } from '@/feature/ogp/cmsOgp'
 import type { WorksType } from '@/libs/cms/types/MicroCmsType'
 import type { Metadata } from 'next'
 import styles from './page.module.scss'
@@ -13,7 +13,7 @@ type Props = {
   }>
 }
 
-export async function generateMetadata(props: ogpParams): Promise<Metadata> {
+export async function generateMetadata(props: OgpParams): Promise<Metadata> {
   return generateMicroCmsMetadata({ endpoint: 'works', params: props.params })
 }
 

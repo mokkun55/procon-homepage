@@ -1,5 +1,5 @@
 import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
-import { generateMicroCmsMetadata, type ogpParams } from '@/feature/ogp/cmsOgp'
+import { type OgpParams, generateMicroCmsMetadata } from '@/feature/ogp/cmsOgp'
 import type { PostsType } from '@/libs/cms/types/MicroCmsType'
 import dayjs from 'dayjs'
 import parser, { type DOMNode, type Element } from 'html-react-parser'
@@ -19,7 +19,7 @@ type CmsElement = DOMNode &
     data: string
   }
 
-export async function generateMetadata(props: ogpParams): Promise<Metadata> {
+export async function generateMetadata(props: OgpParams): Promise<Metadata> {
   return generateMicroCmsMetadata({ endpoint: 'posts', params: props.params })
 }
 

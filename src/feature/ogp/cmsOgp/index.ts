@@ -2,13 +2,13 @@ import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
 import type { EndpointList } from '@/feature/cms/hooks/MicroCmsContentsTypes'
 import type { Metadata } from 'next'
 
-export type ogpParams = {
+export type OgpParams = {
   params: Promise<{ id: string }>
 }
 
 export type Props = {
   endpoint: (typeof EndpointList)[number]
-} & ogpParams
+} & OgpParams
 
 const titleType = {
   posts: 'お知らせ',
