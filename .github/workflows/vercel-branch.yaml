@@ -39,4 +39,4 @@ jobs:
       # 6. Vercelへのデプロイ
       - name: Deploy to Vercel
         run: |
-          vercel --token ${{ secrets.VERCEL_TOKEN }}
+          vercel --token ${{ secrets.VERCEL_TOKEN }} --confirm
