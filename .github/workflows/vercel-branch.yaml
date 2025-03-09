@@ -44,6 +44,6 @@ jobs:
       - name: Comment to PR
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "Deployed to Vercel: aaa"
-          vercel alias --token ${{ secrets.VERCEL_TOKEN }} --limit 1
+          vercel list --token ${{ secrets.VERCEL_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
