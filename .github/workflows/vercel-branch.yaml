@@ -40,9 +40,10 @@ jobs:
       - name: Deploy to Vercel
         run: |
           echo "VERCEL_RESPONSE=$(vercel --token ${{ secrets.VERCEL_TOKEN }} --confirm)" >> $GITHUB_ENV
-
+      
+      # 7. PRへのコメント
       - name: Comment to PR
         run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body "$VERCEL_RESPONSE"
+          gh pr comment ${{ github.event.pull_request.number }} --body "Deploy to here : $VERCEL_RESPONSE"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
