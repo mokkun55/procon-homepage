@@ -39,7 +39,7 @@ jobs:
       # 6. Vercelへのデプロイ
       - name: Deploy to Vercel
         run: |
-          echo 'VERCEL_RESPONSE=$(vercel --token ${{ secrets.VERCEL_TOKEN }} --confirm)' >> $GITHUB_ENV
+          echo "VERCEL_RESPONSE=$(vercel --token ${{ secrets.VERCEL_TOKEN }} --confirm)" >> $GITHUB_ENV
 
       - name: Comment to PR
         run: |
