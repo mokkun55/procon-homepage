@@ -37,10 +37,12 @@ jobs:
           npm install -g vercel
 
       # 6. Vercelへのデプロイ
-      - name: Deploy to Vercel
-        run: |
-          vercel --token ${{ secrets.VERCEL_TOKEN }} --confirm
+      # - name: Deploy to Vercel
+      #   run: |
+      #     vercel --token ${{ secrets.VERCEL_TOKEN }} --confirm
 
       - name: Comment to PR
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "Deployed to Vercel: aaa"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
