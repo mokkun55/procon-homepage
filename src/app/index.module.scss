@@ -6,4 +6,11 @@
   .video {
     width: 100%;
   }
+  
+  @media (max-width: 768px){
+    .contentContainer {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 }

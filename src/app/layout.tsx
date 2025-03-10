@@ -1,6 +1,7 @@
 import './globals.css'
 import './variables.css'
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import '@mantine/core/styles.css'
 import '@mantine/carousel/styles.css'
 import dayjs from 'dayjs'
@@ -25,12 +26,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" {...mantineHtmlProps}>
       <head>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css" />
         <ColorSchemeScript />
       </head>
       <body className={`${noto.variable} antialiased`}>
         <MantineProvider>
           <Layout>{children}</Layout>
         </MantineProvider>
+        <SpeedInsights />
       </body>
     </html>
   )

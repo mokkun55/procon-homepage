@@ -1,6 +1,7 @@
 import { Carousel } from '@/components/Carousel'
 import { Posts } from '@/components/features/Posts'
 import { Section } from '@/components/features/Section'
+import Works from '@/components/features/Works'
 import styles from './index.module.scss'
 
 const Home = async () => {
@@ -36,7 +37,9 @@ const Home = async () => {
               <li>文化祭 : 文化祭では部員の作品を展示しています</li>
             </ul>
           </Section>
-          <Section sectionType="leftLine" text="作品紹介" />
+          <Section sectionType="leftLine" text="作品紹介">
+            <Works contentsPerPage={3} gridCols={{ sm: 1, md: 3 }} />
+          </Section>
           {/* TODO 最近の作品３つくらい置きたい */}
           <Section sectionType="leftLine" text="活動時間・場所">
             <ul style={{ listStyleType: 'disc', listStylePosition: 'inside' }}>

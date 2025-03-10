@@ -15,7 +15,7 @@ export const SideBar = ({ className, style }: Props) => {
       <div className={styles.container} style={style}>
         <Item url="/" text="ホーム" size="big" />
         <Splitter text="入学生向け">
-          <Item url="/registration" text="入部届" size="default" />
+          <Item url="https://forms.gle/qT41wWxK1Fq5Y5fK6" text="入部届" size="default" />
           <Item url="/activity" text="活動日及び活動場所" size="default" />
           <Item url="/works" text="作品一覧" size="default" />
         </Splitter>
