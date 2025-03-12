@@ -13,3 +13,9 @@ pre-commit:
     tsc:
       glob: "*.{js,ts,tsx}"
       run: pnpm run tsc
+
+commit-msg:
+  skip: merge
+  commands:
+    comment-check:
+      run: pnpm run comment-lint

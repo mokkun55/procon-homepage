@@ -10,7 +10,8 @@
     "biome:unsafe": "biome lint --write --unsafe ./src",
     "biome:check": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off --staged",
     "tsc": "tsc --noEmit",
-    "check-spell": "cspell \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.js\""
+    "check-spell": "cspell \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.js\"",
+    "comment-lint": "commitlint -e"
   },
   "dependencies": {
     "@mantine/carousel": "^7.16.0",
@@ -35,6 +36,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
