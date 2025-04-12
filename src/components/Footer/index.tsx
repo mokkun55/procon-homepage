@@ -32,7 +32,7 @@ export const Footer = (props: Props) => {
             <Splitter text="部員向け">
               <Item url="/schedule" text="予定" size="default" />
               <Item url="/posts" text="お知らせ" size="default" />
-              <Item url="https://procon-absence-form-3d1be.firebaseapp.com/" text="欠席連絡フォーム" size="default" />
+              <Item url="https://procon-absence-form.vercel.app/" text="欠席連絡フォーム" size="default" />
             </Splitter>
           </div>
           <div className={styles.column}>
