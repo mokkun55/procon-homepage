@@ -10,10 +10,7 @@ const Home = async () => {
       {/* メイン画像(スライドショー) */}
       <div>
         {/* TODO 画像は仮置き */}
-        <Carousel
-          images={['/images/top-carousel-1.jpg', '/testImgs/mock2.png', '/testImgs/mock3.png', '/testImgs/mock4.png']}
-          isAutoplay
-        />
+        <Carousel images={['/images/top-carousel-1.png', '/images/top-carousel-2.png']} isAutoplay />
       </div>
       <div className={styles.contentContainer}>
         {/* お知らせ一覧 */}
@@ -42,8 +39,9 @@ const Home = async () => {
           </Section>
           <Section sectionType="leftLine" text="活動時間・場所">
             <ul style={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
-              <li>活動時間：木・金の放課後 7限後~</li>
+              <li>活動時間：月・金の放課後 7限目~9限</li>
               <li>活動場所：3号館3階 CAI教室</li>
+              <img src="images/map.png" alt="地図" />
             </ul>
           </Section>
           <Section sectionType="leftLine" text="PC持参について">
