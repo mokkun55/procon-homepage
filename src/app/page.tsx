@@ -40,7 +40,7 @@ const Home = async () => {
           {/* TODO 最近の作品３つくらい置きたい */}
           <Section sectionType="leftLine" text="活動時間・場所">
             <ul style={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
-              <li>活動時間：月・金の放課後 7限後~9限</li>
+              <li>活動時間：月・金の放課後 7限目~9限</li>
               <li>活動場所：3号館3階 CAI教室</li>
               <img src="images/map.png" alt="地図" />
             </ul>
