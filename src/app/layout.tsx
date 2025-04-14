@@ -1,6 +1,7 @@
 import './globals.css'
 import './variables.css'
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core'
+import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import '@mantine/core/styles.css'
 import '@mantine/carousel/styles.css'
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Layout>{children}</Layout>
         </MantineProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
