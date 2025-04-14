@@ -14,9 +14,9 @@ export const pageMetadata = {
     images: [
       {
         //TODO testImgsなので後で差し替え
-        url: 'https://procon-homepage.vercel.app/testImgs/mock2.png',
-        width: 800,
-        height: 600,
+        url: 'https://ktc-procon.vercel.app/images/top-carousel-1.png',
+        width: 1960,
+        height: 1080,
         alt: 'ブログ記事の画像',
       },
     ],
