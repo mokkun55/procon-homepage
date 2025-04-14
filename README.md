@@ -7,8 +7,8 @@ https://github.com/mokkun55/procon-homepage/wiki
 
 | env      | URL                                |
 | -------- | ---------------------------------- |
-| 本番環境 | https://ktc-homepage.vercel.app                         |
-| 検証環境 | https://ktc-homepage.vercel.app |
+| 本番環境 | https://ktc-procon.vercel.app                         |
+| 検証環境 | https://ktc-procon.vercel.app |
 | ローカル | http://localhost:3000              |
 
 ## カンバン
