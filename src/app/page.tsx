@@ -40,7 +40,6 @@ const Home = async () => {
           <Section sectionType="leftLine" text="作品紹介">
             <Works contentsPerPage={3} gridCols={{ sm: 1, md: 3 }} />
           </Section>
-          {/* TODO 最近の作品３つくらい置きたい */}
           <Section sectionType="leftLine" text="活動時間・場所">
             <ul style={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
               <li>活動時間：木・金の放課後 7限後~</li>

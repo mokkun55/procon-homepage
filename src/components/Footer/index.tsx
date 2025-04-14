@@ -7,7 +7,6 @@ type Props = {
   className?: string
 }
 
-//TODOフッターリンク
 export const Footer = (props: Props) => {
   return (
     <div className={`${styles.footer} ${props.className}`}>
