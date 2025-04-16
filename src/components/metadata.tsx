@@ -1,4 +1,6 @@
-export const pageMetadata = {
+import type { Metadata } from 'next'
+
+export const pageMetadata: Metadata = {
   title: '近畿大学工業高等専門学校プログラミング技術部',
   description:
     '近大高専プログラミング技術部です！1年から5年のみんなで高専プロコンや名張祭に向けて日々活動しています！部員募集中です！プログラミング未経験も是非！！！！',
@@ -20,5 +22,13 @@ export const pageMetadata = {
     ],
     locale: 'ja_JP',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '近畿大学工業高等専門学校プログラミング技術部',
+    description:
+      '近大高専プログラミング技術部です！1年から5年のみんなで高専プロコンや名張祭に向けて日々活動しています！部員募集中です！プログラミング未経験も是非！！！！',
+    creator: '@ktc_procon',
+    images: ['https://ktc-procon.vercel.app/images/top-carousel-1.png'],
   },
 }
