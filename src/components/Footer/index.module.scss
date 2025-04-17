@@ -1,29 +1,46 @@
 .footer{
-    background-color: #f8f9fa;
+    background-color: var(--header-footer-bg);
     padding: 30px 70px;
     font-weight: 700;
-
-    @media (max-width: 768px) {
-        padding: 30px 0px;
-      }
 
     .container{
         max-width: 1400px;
         margin: 0 auto;
     }
 
-    .topText{
-        padding:0 1rem;
+    .copyright{
+        font-size: 0.8rem;
+        color: var(--text-copyright);
+        margin-top: 1rem;
+        font-weight: 100;;
+    }
+
+    @media (max-width: 768px) {
+        padding: 30px 0px;
+      }
+
+    .copyrightContainer{
+        @extend .topText;
+    }
+
+    .topText {
+        padding:0 0.5rem;
         
         .school{
             font-weight: 100;
         }
         .club{
             font-size:1.4rem;
-            color:#307690;
+            color: var(--text-link);
             margin:0 0 2.0rem;
         }
     
+    }
+
+    .bottomText {
+        @extend .topText;
+        margin: 16px 0;
+        padding-top: 2rem; 
     }
 
     .footerColumn{
