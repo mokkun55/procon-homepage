@@ -1,0 +1,19 @@
+.container {
+  margin-top: 32px;
+  padding: 24px;
+
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 8px 0;
+  }
+
+  .text {
+    color: var(--text-primary);
+  }
+
+  .link {
+    color: var(--text-link);
+    text-decoration: underline;
+  }
+}
