@@ -4,6 +4,7 @@ on:
   push:
     branches-ignore:
       - main # mainブランチ以外にプッシュされたときにデプロイを実行
+      - develop # developブランチ以外にプッシュされたときにデプロイを実行
 
 jobs:
   deploy:
