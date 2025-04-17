@@ -10,8 +10,9 @@
 
     .copyright{
         font-size: 0.8rem;
-        color: var(--text-date-primary);
+        color: var(--text-copyright);
         margin-top: 1rem;
+        font-weight: 100;;
     }
 
     @media (max-width: 768px) {
