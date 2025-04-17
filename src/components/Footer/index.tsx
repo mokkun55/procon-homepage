@@ -16,7 +16,6 @@ export const Footer = (props: Props) => {
             <p className={styles.school}>近畿大学工業高等専門学校</p>
           </Link>
           <h1 className={styles.club}>プログラミング技術部</h1>
-
           <Item url="/" text="ホーム" size="big" />
         </div>
         <div className={styles.footerColumn}>
@@ -40,6 +39,15 @@ export const Footer = (props: Props) => {
               <Item url="https://github.com/mokkun55/procon-homepage" text="Github" size="default" />
             </Splitter>
           </div>
+        </div>
+        <div className={styles.bottomText}>
+          {/* TODO 後で要望フォームにリンクする */}
+          <Item url="/" text="お問い合わせ" size="default" />
+          <Item url="/privacy" text="プライバシーポリシー" size="default" />
+        </div>
+
+        <div className={styles.copyrightContainer}>
+          <p className={styles.copyright}>© kutc Programming club</p>
         </div>
       </div>
     </div>
