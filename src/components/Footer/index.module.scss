@@ -1,11 +1,16 @@
 .footer{
-    background-color: #f8f9fa;
+    background-color: var(--header-footer-bg);
     padding: 30px 70px;
     font-weight: 700;
 
+    .container{
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
     .copyright{
         font-size: 0.8rem;
-        color: #6c757d;
+        color: var(--text-date-primary);
         margin-top: 1rem;
     }
 
@@ -14,11 +19,7 @@
       }
 
     .copyrightContainer{
-        padding: 0 0.5rem;
-        .container{
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        @extend .topText;
     }
 
     .topText {
@@ -29,7 +30,7 @@
         }
         .club{
             font-size:1.4rem;
-            color:#307690;
+            color: var(--text-link);
             margin:0 0 2.0rem;
         }
     

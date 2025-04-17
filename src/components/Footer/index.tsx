@@ -47,7 +47,7 @@ export const Footer = (props: Props) => {
         </div>
 
         <div className={styles.copyrightContainer}>
-          <p className={styles.copyright}>© kutc Programming club</p>
+          <small className={styles.copyright}>&copy; kutc Programming club</small>
         </div>
       </div>
     </div>
