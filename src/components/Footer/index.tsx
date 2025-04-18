@@ -33,9 +33,10 @@ export const Footer = (props: Props) => {
               <Item url="https://procon-absence-form.vercel.app/" text="欠席連絡フォーム" size="default" />
             </Splitter>
           </div>
+          {/* TODO 一度/devは使わない */}
           <div className={styles.column}>
             <Splitter text="開発">
-              <Item url="/development" text="開発の余談" size="default" />
+              {/* <Item url="/development" text="開発の余談" size="default" /> */}
               <Item url="https://github.com/mokkun55/procon-homepage" text="Github" size="default" />
             </Splitter>
           </div>
