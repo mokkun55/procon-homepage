@@ -1,7 +1,7 @@
 import { Carousel } from '@/components/Carousel'
-import { Posts } from '@/components/features/Posts'
-import { Section } from '@/components/features/Section'
-import Works from '@/components/features/Works'
+import { Posts } from '@/components/Posts'
+import { Section } from '@/components/Section'
+import Works from '@/components/Works'
 import styles from './index.module.scss'
 
 const Home = async () => {

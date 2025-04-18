@@ -1,5 +1,5 @@
 'use client'
-import { AppShell } from '../features/AppShell'
+import { AppShell } from '../AppShell'
 import styles from './index.module.scss'
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {

@@ -1,6 +1,6 @@
 'use client'
-import { Pagination } from '@/components/features/Pagination'
-import { Post } from '@/components/features/Post'
+import { Pagination } from '@/components/Pagination'
+import { Post } from '@/components/Post'
 import { getContentsApi } from '@/feature/cms/hooks/MicroCmsContents'
 import type { PostsType } from '@/libs/cms/types/MicroCmsType'
 import { createLoadingPosts } from '@/libs/post/createPostDummy'

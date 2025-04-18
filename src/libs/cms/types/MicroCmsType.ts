@@ -1,4 +1,4 @@
-import type { symbolMapping } from '@/components/features/Link'
+import type { symbolMapping } from '@/components/Link'
 
 export type WorksType = {
   id: string

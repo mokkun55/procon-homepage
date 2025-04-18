@@ -1,6 +1,6 @@
 import { Carousel } from '@/components/Carousel'
-import { Link } from '@/components/features/Link'
-import { Tags } from '@/components/features/Tags'
+import { Link } from '@/components/Link'
+import { Tags } from '@/components/Tags'
 import { getContent } from '@/feature/cms/hooks/MicroCmsContents'
 import { type OgpParams, generateMicroCmsMetadata } from '@/feature/ogp/cmsOgp'
 import type { WorksType } from '@/libs/cms/types/MicroCmsType'

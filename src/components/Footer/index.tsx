@@ -1,5 +1,5 @@
-import { Item } from '@/components/features/Item'
-import { Splitter } from '@/components/features/Splitter'
+import { Item } from '@/components/Item'
+import { Splitter } from '@/components/Splitter'
 import Link from 'next/link'
 import styles from './index.module.scss'
 

@@ -1,5 +1,5 @@
 'use client'
-import { Work } from '@/components/features/Work'
+import { Work } from '@/components/Work'
 import { getContentsApi } from '@/feature/cms/hooks/MicroCmsContents'
 import type { WorksType } from '@/libs/cms/types/MicroCmsType'
 import { Loader, SimpleGrid } from '@mantine/core'

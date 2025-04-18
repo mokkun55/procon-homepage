@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '@/components/features/Button/index.module.scss'
+import styles from '@/components/Button/index.module.scss'
 import { Button as MantineButton } from '@mantine/core'
 import Link from 'next/link'
 
