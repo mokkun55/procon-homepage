@@ -1,0 +1,42 @@
+name: Deploy to Vercel on Merge
+
+on:
+  push:
+    branches:
+      - deploy # deployブランチにプッシュされたときにデプロイを実行
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 使用する仮想環境
+
+    steps:
+      # 1. コードのチェックアウト
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      # 2. Node.jsのセットアップ
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.17.0' # 使用するNode.jsのバージョン
+
+      # 3. キャッシュの削除
+      - name: Clear Cache
+        run: |
+          rm -rf node_modules/.cache
+          npm cache clean --force
+
+      # 4. 依存関係のインストール
+      - name: Install dependencies
+        run: |
+          npm install --legacy-peer-deps
+
+      # 5. Vercel CLIのインストール
+      - name: Install Vercel CLI
+        run: |
+          npm install -g vercel
+
+      # 6. Vercelへのデプロイ
+      - name: Deploy to Vercel
+        run: |
+          vercel --token ${{ secrets.VERCEL_TOKEN }} --confirm
