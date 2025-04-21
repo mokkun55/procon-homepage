@@ -41,8 +41,7 @@ export const Footer = (props: Props) => {
           </div>
         </div>
         <div className={styles.bottomText}>
-          {/* TODO 後で要望フォームにリンクする */}
-          <Item url="/" text="お問い合わせ" size="default" />
+          <Item url="https://forms.gle/jJufKCnkcdk3z4no6" text="お問い合わせ" size="default" />
           <Item url="/privacy" text="プライバシーポリシー" size="default" />
         </div>
 

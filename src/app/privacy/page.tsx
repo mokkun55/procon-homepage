@@ -34,8 +34,7 @@ const Page = (): ReactNode => {
       <Section text="お問い合わせ" sectionType="leftLine">
         <p className={styles.text}>
           内容に関するご質問・ご要望がありましたら、
-          {/* TODO 後で要望フォームにリンクする */}
-          <a href="/" className={styles.link}>
+          <a href="https://forms.gle/jJufKCnkcdk3z4no6" className={styles.link}>
             お問い合わせフォーム
           </a>
           を通じてご連絡ください。
