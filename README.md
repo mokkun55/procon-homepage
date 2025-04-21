@@ -1,6 +1,6 @@
 # 近大高専プログラミング部HP
 
-## 開発ドキュメント(作成中)
+## 開発ドキュメント
 https://github.com/mokkun55/procon-homepage/wiki
 
 ## URL
