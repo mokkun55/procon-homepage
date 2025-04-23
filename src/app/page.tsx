@@ -28,6 +28,16 @@ const Home = async () => {
           </Section>
           <Section sectionType="leftLine" text="活動内容">
             <ul style={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+              <li>
+                勉強会：初心者向けのプログラミング勉強会を定期的に開催（
+                <a
+                  href="https://winter-rock-f72.notion.site/1dc87bcd6fe1800da6beecf2bd6bcc70?pvs=4"
+                  className={styles.link}
+                >
+                  勉強資料
+                </a>
+                ）
+              </li>
               <li>Web開発：学校紹介サイトや部活管理システムの開発</li>
               <li>アプリ制作：便利なツールアプリやゲームの制作</li>
               <li>イベントへの参加：プログラミングコンテストやハッカソンへの参加</li>
