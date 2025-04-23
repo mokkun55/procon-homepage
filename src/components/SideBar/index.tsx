@@ -21,7 +21,11 @@ export const SideBar = ({ className, style }: Props) => {
         </Splitter>
         <Splitter text="部員向け">
           <Item url="/schedule" text="予定" size="default" />
-          <Item url="https://www.notion.so/1dc87bcd6fe1800da6beecf2bd6bcc70" text="勉強資料" size="default" />
+          <Item
+            url="https://winter-rock-f72.notion.site/1dc87bcd6fe1800da6beecf2bd6bcc70?pvs=4"
+            text="勉強資料"
+            size="default"
+          />
           <Item url="/posts" text="お知らせ" size="default" />
           <Item url="https://procon-absence-form.vercel.app/" text="欠席連絡フォーム" size="default" />
         </Splitter>
