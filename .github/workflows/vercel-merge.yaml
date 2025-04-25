@@ -3,7 +3,7 @@ name: Deploy to Vercel on Merge
 on:
   push:
     branches:
-      - deploy # deployブランチにプッシュされたときにデプロイを実行
+      - develop # developブランチにプッシュされたときにデプロイを実行
 
 jobs:
   deploy:

@@ -1,5 +1,5 @@
-import { Section } from '@/components/features/Section'
-import { SectionSplit } from '@/components/features/SectionSplit'
+import { Section } from '@/components/Section'
+import { SectionSplit } from '@/components/SectionSplit'
 import styles from './page.module.scss'
 
 export default function Activity() {

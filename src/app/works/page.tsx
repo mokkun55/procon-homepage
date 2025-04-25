@@ -1,5 +1,5 @@
 'use client'
-import WorksComponent from '@/components/features/Works'
+import WorksComponent from '@/components/Works'
 import styles from './page.module.scss'
 
 export default function Works() {

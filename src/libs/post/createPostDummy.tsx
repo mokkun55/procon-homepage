@@ -1,4 +1,4 @@
-import { Post } from '@/components/features/Post'
+import { Post } from '@/components/Post'
 import { Loader } from '@mantine/core'
 import styles from './index.module.scss'
 

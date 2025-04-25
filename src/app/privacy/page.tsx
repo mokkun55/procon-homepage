@@ -1,4 +1,4 @@
-import { Section } from '@/components/features/Section'
+import { Section } from '@/components/Section'
 import type { ReactNode } from 'react'
 import styles from './style.module.scss'
 

@@ -1,5 +1,5 @@
-import { Item } from '@/components/features/Item'
-import { Splitter } from '@/components/features/Splitter'
+import { Item } from '@/components/Item'
+import { Splitter } from '@/components/Splitter'
 import Link from 'next/link'
 import styles from './index.module.scss'
 
@@ -29,13 +29,19 @@ export const Footer = (props: Props) => {
           <div className={styles.column}>
             <Splitter text="部員向け">
               <Item url="/schedule" text="予定" size="default" />
+              <Item
+                url="https://winter-rock-f72.notion.site/1dc87bcd6fe1800da6beecf2bd6bcc70?pvs=4"
+                text="勉強資料"
+                size="default"
+              />
               <Item url="/posts" text="お知らせ" size="default" />
               <Item url="https://procon-absence-form.vercel.app/" text="欠席連絡フォーム" size="default" />
             </Splitter>
           </div>
+          {/* TODO 一度/devは使わない */}
           <div className={styles.column}>
             <Splitter text="開発">
-              <Item url="/development" text="開発の余談" size="default" />
+              {/* <Item url="/development" text="開発の余談" size="default" /> */}
               <Item url="https://github.com/mokkun55/procon-homepage" text="Github" size="default" />
             </Splitter>
           </div>

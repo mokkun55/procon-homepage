@@ -1,0 +1,16 @@
+.tags {
+  width: fit-content;
+  flex: auto;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary);
+  border: solid 2px var(--primary);
+  font-size: 16px;
+  font-weight: 700;
+
+  .text{
+    padding: 2px 4px;
+    color: var(--primary);
+  }
+}
+
