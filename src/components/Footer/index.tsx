@@ -30,7 +30,7 @@ export const Footer = (props: Props) => {
             <Splitter text="部員向け">
               <Item url="/schedule" text="予定" size="default" />
               <Item
-                url="https://winter-rock-f72.notion.site/1dc87bcd6fe1800da6beecf2bd6bcc70?pvs=4"
+                url="https://kutc-procon.notion.site/1dc87bcd6fe1800da6beecf2bd6bcc70"
                 text="勉強資料"
                 size="default"
               />

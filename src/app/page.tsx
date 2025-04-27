@@ -30,10 +30,7 @@ const Home = async () => {
             <ul style={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
               <li>
                 勉強会：初心者向けのプログラミング勉強会を定期的に開催（
-                <a
-                  href="https://winter-rock-f72.notion.site/1dc87bcd6fe1800da6beecf2bd6bcc70?pvs=4"
-                  className={styles.link}
-                >
+                <a href="https://kutc-procon.notion.site/1dc87bcd6fe1800da6beecf2bd6bcc70" className={styles.link}>
                   勉強資料
                 </a>
                 ）
