@@ -45,6 +45,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${noto.variable} antialiased`}>
+        {/* cSpell:disable-next-line */}
+        <meta name="google-site-verification" content="ipHB5RlHmTiDqvzz0_IprjgKKluhCZF34yBFQn-NNsU" />
         <MantineProvider>
           <Layout>{children}</Layout>
         </MantineProvider>
