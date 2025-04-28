@@ -29,7 +29,7 @@ const jsonLd: WithContext<WebSite> = {
   '@type': 'WebSite',
   name: '近畿大学工業高等専門学校プログラミング技術部',
   alternateName: '近大高専プロコン部',
-  url: "https://ktc-procon.vercel.app/'",
+  url: 'https://ktc-procon.vercel.app/',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
