@@ -10,6 +10,7 @@ import { Noto_Sans_JP } from 'next/font/google'
 import 'dayjs/locale/ja'
 import { Layout } from '@/components/Layout'
 dayjs.locale('ja')
+import type { WebSite, WithContext } from 'schema-dts'
 
 import { pageMetadata } from '@/components/metadata'
 
@@ -23,15 +24,12 @@ const noto = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
 })
 
-const jsonLd = {
-  '@context': 'https://schema.org/',
+const jsonLd: WithContext<WebSite> = {
+  '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: '近畿大学工業高等専門学校プログラミング技術部',
-  url: "https://ktc-procon.vercel.app/'",
-  author: {
-    '@type': 'Person',
-    name: '近畿大学工業高等専門学校プログラミング技術部',
-  },
+  alternateName: '近大高専プロコン部',
+  url: 'https://ktc-procon.vercel.app/',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
